@@ -5,7 +5,8 @@ urlpatterns=[
     path("write",views.write_message),
     path("get_all/",views.get_all_messages),
     path("get_all_unread/",views.get_all_unread_messages),
-    path("get_message/",views.read_message),
+    path("get_message",views.read_message),
     path("delete_message",views.delete_message),
-    path("auth",views.authentication)
+    path("auth",views.authentication),
+    path("register",views.register)
 ]

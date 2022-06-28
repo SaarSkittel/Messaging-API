@@ -11,7 +11,7 @@ def get_tokens_for_user(user):
 def get_user_from_token(token):
     try:
         access_token=AccessToken(token=token, verify=False)
-        return access_token.get(key="user")
+        return access_token.get(key="user_id")
     except error:
         raise error
 
