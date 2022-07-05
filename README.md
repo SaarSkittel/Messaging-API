@@ -6,12 +6,19 @@ The project utilaze SimpleJWT, SQLite DB, middleware and RESTdul API requests.
 ## API requests
 
 • Write Message- Sends a message to specified user.
+
 • Read Message- Read the last message from a specied user.
+
 • Delete Message- Deletes a nessage from the users conversations.
+
 • Get All Messages- Get all messages from specied user.
+
 • Get Unread Messages-Get all unread messages from specied user.
+
 • Authentication- Authenticate username and password and returns access token and refresh token.
+
 • Register- Signs a new user to the system
+
 • Token- Refresh a new access token
 
 
