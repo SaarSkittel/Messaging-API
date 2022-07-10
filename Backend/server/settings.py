@@ -56,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'api.middleware.Middleware'
 ]
 
 ROOT_URLCONF = 'server.urls'
@@ -75,6 +76,10 @@ TEMPLATES = [
         },
     },
 ]
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8000",
+]
+CORS_ALLOW_CREDENTIALS = True
 
 WSGI_APPLICATION = 'server.wsgi.application'
 
@@ -156,6 +161,12 @@ SIMPLE_JWT = {
     'TOKEN_USER_CLASS': 'rest_framework_simplejwt.models.TokenUser',
 
     'JTI_CLAIM': 'jti',
+    'AUTH_COOKIE': 'REFRESH_TOKEN',  # Cookie name. Enables cookies if value is set.
+    'AUTH_COOKIE_DOMAIN': None,     # A string like "example.com", or None for standard domain cookie.
+    'AUTH_COOKIE_SECURE': False,    # Whether the auth cookies should be secure (https:// only).
+    'AUTH_COOKIE_HTTP_ONLY' : False, # Http only cookie flag.It's not fetch by javascript.
+    'AUTH_COOKIE_PATH': '/',        # The path of the auth cookie.
+    'AUTH_COOKIE_SAMESITE': 'Lax',  # Whether to set the flag restricting cookie leaks on cross-site requests. This can be 'Lax', 'Strict', or None to disable the flag.
 }
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (

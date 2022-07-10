@@ -1,14 +1,15 @@
-from distutils.log import error
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from django.contrib.auth.models import User
 from .tools import update_unread,update_list_unread,delete,write
-from .jwt import get_tokens_for_user,get_user_from_token
+from .jwt import get_tokens_for_user,get_user_from_token,refresh_access_token,verify_refresh_token
 from rest_framework import status
+from django.conf import settings
 from django.forms.models import model_to_dict
 from django.contrib.auth import authenticate
 from django.core.exceptions import PermissionDenied
 from datetime import datetime
+from rest_framework_simplejwt.exceptions import TokenError
 
 @api_view(["POST"])
 def write_message(request):
@@ -104,7 +105,20 @@ def authentication(request):
     try:
        user = authenticate(username=user_name, password=user_password)
        if user is not None:
-            return Response(get_tokens_for_user(user))
+            response=Response()
+            tokens=get_tokens_for_user(user)
+            response.set_cookie(
+                    key = settings.SIMPLE_JWT['AUTH_COOKIE'],  
+                    value = tokens["refresh"],
+                    expires = settings.SIMPLE_JWT['REFRESH_TOKEN_LIFETIME'],
+                    secure = settings.SIMPLE_JWT['AUTH_COOKIE_SECURE'],
+                    httponly = settings.SIMPLE_JWT['AUTH_COOKIE_HTTP_ONLY'],
+                    samesite = settings.SIMPLE_JWT['AUTH_COOKIE_SAMESITE']
+                )
+            
+            response.data={"access_token":tokens["access"]}
+            print("test2")
+            return response
        else:
             return Response(status=status.HTTP_404_NOT_FOUND)
     except PermissionDenied:
@@ -125,7 +139,21 @@ def register(request):
         return Response(status=status.HTTP_201_CREATED)
     except:
         return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-  
+@api_view(["POST"])
+def test(request):
+    return Response(status=status.HTTP_200_OK)
+
 @api_view(["POST"])
 def token(request):
-    pass
+    try:
+        refresh_token=request.COOKIES["REFRESH_TOKEN"]
+        if refresh_token is None:
+            return Response(status=status.HTTP_400_BAD_REQUEST)
+        verify_refresh_token(refresh_token)
+        access_token=refresh_access_token(refresh_token)
+        print(f'token:{access_token}')
+        return Response(status=status.HTTP_200_OK,data={"access_token":str(access_token)})
+    except TokenError:
+        return Response(status=status.HTTP_403_FORBIDDEN)
+    except:
+        return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
