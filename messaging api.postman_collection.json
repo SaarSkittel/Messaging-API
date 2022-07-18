@@ -1,230 +1,183 @@
 {
-	"id": "50b944a1-091b-a06c-1732-a134f3549dcf",
-	"name": "messaging api",
-	"description": "",
-	"order": [
-		"4d61e2dd-92f7-73c4-bcb5-97a7517b1b51",
-		"89f5acbf-2803-eca0-fd7e-6cb35e96cb62",
-		"7bb6099e-adc7-6781-0c83-039efbca0b6c",
-		"66e87c99-64a4-b74b-3da5-c9fda9e4f1a5",
-		"40074f2c-d890-8c99-fd93-9f421756846e",
-		"2ef72f84-ce7c-2290-3a71-50e0c16d46a9"
-	],
-	"folders": [],
-	"folders_order": [],
-	"timestamp": 1656234452742,
-	"owner": 0,
-	"public": false,
-	"requests": [
+	"variables": [],
+	"info": {
+		"name": "messaging api",
+		"_postman_id": "50b944a1-091b-a06c-1732-a134f3549dcf",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
 		{
-			"id": "2ef72f84-ce7c-2290-3a71-50e0c16d46a9",
-			"headers": "Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2MzM5Njc1LCJpYXQiOjE2NTYzMzkzNzUsImp0aSI6Ijk4NTM1NmI5MjUxNjQ0MjBhYjE4YTA0MjJkMGYwNTVmIiwidXNlcl9pZCI6M30.CDC0jAv8-BiO492kfSDmUhppe5Ezfiucmvk4Shv5miw\nContent-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Authorization",
-					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2MzM5Njc1LCJpYXQiOjE2NTYzMzkzNzUsImp0aSI6Ijk4NTM1NmI5MjUxNjQ0MjBhYjE4YTA0MjJkMGYwNTVmIiwidXNlcl9pZCI6M30.CDC0jAv8-BiO492kfSDmUhppe5Ezfiucmvk4Shv5miw",
-					"description": "",
-					"enabled": true
-				},
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "localhost:8000/api/delete_message",
-			"queryParams": [],
-			"preRequestScript": null,
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "DELETE",
-			"data": [],
-			"dataMode": "raw",
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1656339640504,
-			"name": "delete message",
-			"description": "",
-			"collectionId": "50b944a1-091b-a06c-1732-a134f3549dcf",
-			"responses": [],
-			"rawModeData": "{\n\t\"user_conversation\": 2,\n\t\"sort\":2\n}"
-		},
-		{
-			"id": "40074f2c-d890-8c99-fd93-9f421756846e",
-			"headers": "Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2MzM5Njc1LCJpYXQiOjE2NTYzMzkzNzUsImp0aSI6Ijk4NTM1NmI5MjUxNjQ0MjBhYjE4YTA0MjJkMGYwNTVmIiwidXNlcl9pZCI6M30.CDC0jAv8-BiO492kfSDmUhppe5Ezfiucmvk4Shv5miw\n",
-			"headerData": [
-				{
-					"key": "Authorization",
-					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2MzM5Njc1LCJpYXQiOjE2NTYzMzkzNzUsImp0aSI6Ijk4NTM1NmI5MjUxNjQ0MjBhYjE4YTA0MjJkMGYwNTVmIiwidXNlcl9pZCI6M30.CDC0jAv8-BiO492kfSDmUhppe5Ezfiucmvk4Shv5miw",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "http://localhost:8000/api/get_all_unread/?id=2",
-			"queryParams": [
-				{
-					"key": "id",
-					"value": "2",
-					"equals": true,
-					"description": "",
-					"enabled": true
-				}
-			],
-			"preRequestScript": null,
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "GET",
-			"data": null,
-			"dataMode": "params",
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1656339680718,
-			"name": "get unread",
-			"description": "",
-			"collectionId": "50b944a1-091b-a06c-1732-a134f3549dcf",
-			"responses": []
-		},
-		{
-			"id": "4d61e2dd-92f7-73c4-bcb5-97a7517b1b51",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "localhost:8000/api/auth",
-			"queryParams": [],
-			"preRequestScript": null,
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "POST",
-			"data": [],
-			"dataMode": "raw",
-			"version": 2,
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1656340313836,
 			"name": "auth",
-			"description": "",
-			"collectionId": "50b944a1-091b-a06c-1732-a134f3549dcf",
-			"responses": [],
-			"rawModeData": "{\n\t\"username\":\"john\",\n\t\"password\":\"johnpassword\"\n}"
-		},
-		{
-			"id": "66e87c99-64a4-b74b-3da5-c9fda9e4f1a5",
-			"headers": "Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2MzM5Njc1LCJpYXQiOjE2NTYzMzkzNzUsImp0aSI6Ijk4NTM1NmI5MjUxNjQ0MjBhYjE4YTA0MjJkMGYwNTVmIiwidXNlcl9pZCI6M30.CDC0jAv8-BiO492kfSDmUhppe5Ezfiucmvk4Shv5miw\n",
-			"headerData": [
-				{
-					"key": "Authorization",
-					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2MzM5Njc1LCJpYXQiOjE2NTYzMzkzNzUsImp0aSI6Ijk4NTM1NmI5MjUxNjQ0MjBhYjE4YTA0MjJkMGYwNTVmIiwidXNlcl9pZCI6M30.CDC0jAv8-BiO492kfSDmUhppe5Ezfiucmvk4Shv5miw",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "http://localhost:8000/api/get_all/?id=2",
-			"queryParams": [
-				{
-					"key": "id",
-					"value": "2",
-					"equals": true,
-					"description": "",
-					"enabled": true
-				}
-			],
-			"preRequestScript": null,
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "GET",
-			"data": null,
-			"dataMode": "params",
-			"version": 2,
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1656339678441,
-			"name": "get all",
-			"description": "",
-			"collectionId": "50b944a1-091b-a06c-1732-a134f3549dcf",
-			"responses": []
-		},
-		{
-			"id": "7bb6099e-adc7-6781-0c83-039efbca0b6c",
-			"headers": "Content-Type: application/json\nAuthorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2MzE1NjI2LCJpYXQiOjE2NTYzMTUzMjYsImp0aSI6IjUwMTY1NjEyY2M4YTRjOTA4N2UwZDk4ZDdhNDg1ZDI0IiwidXNlcl9pZCI6Mn0.Xz0g3w9xuYOxK40bMFhVJK5YuYajV4J1kLpBCJdKHKY\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"enabled": true
+			"request": {
+				"url": "localhost:8000/api/auth",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"john\",\n\t\"password\":\"johnpassword\"\n}"
 				},
-				{
-					"key": "Authorization",
-					"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2MzE1NjI2LCJpYXQiOjE2NTYzMTUzMjYsImp0aSI6IjUwMTY1NjEyY2M4YTRjOTA4N2UwZDk4ZDdhNDg1ZDI0IiwidXNlcl9pZCI6Mn0.Xz0g3w9xuYOxK40bMFhVJK5YuYajV4J1kLpBCJdKHKY",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "http://localhost:8000/api/write",
-			"queryParams": [],
-			"preRequestScript": null,
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "POST",
-			"data": [],
-			"dataMode": "raw",
-			"version": 2,
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1656339684647,
-			"name": "write",
-			"description": "",
-			"collectionId": "50b944a1-091b-a06c-1732-a134f3549dcf",
-			"responses": [],
-			"rawModeData": "{\n\t\"receiver\" : \"3\",\n\t\"subject\" : \"hello\",\n\t\"message\" : \"hello world\",\n\t\"creation date\" : \"2022-04-27\"\n}"
+				"description": ""
+			},
+			"response": []
 		},
 		{
-			"id": "89f5acbf-2803-eca0-fd7e-6cb35e96cb62",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"enabled": true
-				},
-				{
-					"key": "",
-					"value": "",
-					"description": "",
-					"enabled": false
-				}
-			],
-			"url": "localhost:8000/api/register",
-			"queryParams": [],
-			"preRequestScript": null,
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "POST",
-			"data": [],
-			"dataMode": "raw",
-			"version": 2,
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1656339352299,
 			"name": "register",
-			"description": "",
-			"collectionId": "50b944a1-091b-a06c-1732-a134f3549dcf",
-			"responses": [],
-			"rawModeData": "{\n\t\"username\":\"Saar12\",\n\t\"email\":\"test@gmail.com\",\n\t\"password\":\"Aa123123\"\n\t\n}"
+			"request": {
+				"url": "localhost:8000/api/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"Saar12\",\n\t\"email\":\"test@gmail.com\",\n\t\"password\":\"Aa123123\"\n\t\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "write",
+			"request": {
+				"url": "http://localhost:8000/api/write",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2MzE1NjI2LCJpYXQiOjE2NTYzMTUzMjYsImp0aSI6IjUwMTY1NjEyY2M4YTRjOTA4N2UwZDk4ZDdhNDg1ZDI0IiwidXNlcl9pZCI6Mn0.Xz0g3w9xuYOxK40bMFhVJK5YuYajV4J1kLpBCJdKHKY",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"receiver\" : \"3\",\n\t\"subject\" : \"hello\",\n\t\"message\" : \"hello world\",\n\t\"creation date\" : \"2022-04-27\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get all",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8000/api/get_all/?id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get_all",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2MzM5Njc1LCJpYXQiOjE2NTYzMzkzNzUsImp0aSI6Ijk4NTM1NmI5MjUxNjQ0MjBhYjE4YTA0MjJkMGYwNTVmIiwidXNlcl9pZCI6M30.CDC0jAv8-BiO492kfSDmUhppe5Ezfiucmvk4Shv5miw",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get unread",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8000/api/get_all_unread/?id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get_all_unread",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2MzM5Njc1LCJpYXQiOjE2NTYzMzkzNzUsImp0aSI6Ijk4NTM1NmI5MjUxNjQ0MjBhYjE4YTA0MjJkMGYwNTVmIiwidXNlcl9pZCI6M30.CDC0jAv8-BiO492kfSDmUhppe5Ezfiucmvk4Shv5miw",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "delete message",
+			"request": {
+				"url": "localhost:8000/api/delete_message",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2MzM5Njc1LCJpYXQiOjE2NTYzMzkzNzUsImp0aSI6Ijk4NTM1NmI5MjUxNjQ0MjBhYjE4YTA0MjJkMGYwNTVmIiwidXNlcl9pZCI6M30.CDC0jAv8-BiO492kfSDmUhppe5Ezfiucmvk4Shv5miw",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user_conversation\": 2,\n\t\"sort\":2\n}"
+				},
+				"description": ""
+			},
+			"response": []
 		}
 	]
 }

@@ -10,7 +10,7 @@ urlpatterns=[
     path("auth",views.authentication),
     path("register",views.register),
     path("token",views.token),
-    path("test",views.test)
+    path("test/",views.test)
 
 
 ]

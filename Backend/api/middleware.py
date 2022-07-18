@@ -9,12 +9,12 @@ class Middleware:
         self.get_response=get_response
 
     def __call__(self, request):
-        response=self.get_response(request)
+        response=self.get_response(request) 
         return response 
         
     def process_view(self,request,view_func,view_args,view_kargs):
-        paths=["/api/auth","/api/register","/api/token"]
-        if request.path not in paths:
+        paths=["/api/auth/","/api/register/","/api/token/", "/api/test/"]
+        if request.path not in paths and "/admin/" not in request.path and "/__debug__/" not in request.path:
             if not request.headers.get("Authorization"):
                 response = Response(
                     status=status.HTTP_400_BAD_REQUEST
@@ -24,7 +24,9 @@ class Middleware:
                 response.renderer_context = {}
                 return response
             try:
+                
                 result=verify_access_token(request.headers["Authorization"])
+                
             except:
                 response = Response(
                     status=status.HTTP_401_UNAUTHORIZED
@@ -33,7 +35,6 @@ class Middleware:
                 response.accepted_media_type = "application/json"
                 response.renderer_context = {}
                 return response
-        else:
-            pass
+        
         
         

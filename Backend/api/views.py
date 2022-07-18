@@ -47,6 +47,7 @@ def get_all_messages(request):
         user=User.objects.get(id=current_user)
         conversations= user.conversation_set.get(friend=user_conversation)
         messages=conversations.message_set.all()
+        print("test")
     except:
         return Response(status=status.HTTP_422_UNPROCESSABLE_ENTITY)
     update_unread(messages)
@@ -59,7 +60,6 @@ def get_all_unread_messages(request):
     try:
         user=User.objects.get(id=current_user)
         conversations= user.conversation_set.get(friend=user_conversation)
-        
         messages=conversations.message_set.filter(unread=True)
     except:
         return Response(status=status.HTTP_422_UNPROCESSABLE_ENTITY)
@@ -139,9 +139,20 @@ def register(request):
         return Response(status=status.HTTP_201_CREATED)
     except:
         return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-@api_view(["POST"])
+@api_view(["GET"])
 def test(request):
-    return Response(status=status.HTTP_200_OK)
+
+    current_user=2
+    user_conversation=3
+    try:
+        user=User.objects.get(id=current_user)
+        conversations= user.conversation_set.get(friend=user_conversation)
+        messages=conversations.message_set.all()
+        print("test")
+    except:
+        return Response(status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+    update_unread(messages)
+    return Response(list(messages.values()))
 
 @api_view(["POST"])
 def token(request):
