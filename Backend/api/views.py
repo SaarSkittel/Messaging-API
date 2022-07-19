@@ -1,7 +1,8 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from django.contrib.auth.models import User
-from .tools import update_unread,update_list_unread,delete,write
+from .models import Message
+from .tools import update_unread,update_list_unread,delete,write,new_write
 from .jwt import get_tokens_for_user,get_user_from_token,refresh_access_token,verify_refresh_token
 from rest_framework import status
 from django.conf import settings
@@ -44,10 +45,7 @@ def get_all_messages(request):
     current_user=get_user_from_token(request.headers["Authorization"])
     user_conversation=request.GET.get("id")
     try:
-        user=User.objects.get(id=current_user)
-        conversations= user.conversation_set.get(friend=user_conversation)
-        messages=conversations.message_set.all()
-        print("test")
+        messages=Message.objects.select_related("conversation__user","conversation").filter(conversation__user__id=current_user, conversation__friend=user_conversation)
     except:
         return Response(status=status.HTTP_422_UNPROCESSABLE_ENTITY)
     update_unread(messages)
@@ -117,7 +115,7 @@ def authentication(request):
                 )
             
             response.data={"access_token":tokens["access"]}
-            print("test2")
+            
             return response
        else:
             return Response(status=status.HTTP_404_NOT_FOUND)
@@ -139,20 +137,8 @@ def register(request):
         return Response(status=status.HTTP_201_CREATED)
     except:
         return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-@api_view(["GET"])
-def test(request):
 
-    current_user=2
-    user_conversation=3
-    try:
-        user=User.objects.get(id=current_user)
-        conversations= user.conversation_set.get(friend=user_conversation)
-        messages=conversations.message_set.all()
-        print("test")
-    except:
-        return Response(status=status.HTTP_422_UNPROCESSABLE_ENTITY)
-    update_unread(messages)
-    return Response(list(messages.values()))
+
 
 @api_view(["POST"])
 def token(request):
@@ -166,5 +152,33 @@ def token(request):
         return Response(status=status.HTTP_200_OK,data={"access_token":str(access_token)})
     except TokenError:
         return Response(status=status.HTTP_403_FORBIDDEN)
+    except:
+        return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+@api_view(["GET"])
+def test(request):
+    current_user=6
+    user_conversation=5
+    now = datetime.now()
+    data={
+        "sender":None,
+        "receiver":None,
+        "subject":"hello",
+        "message":"hello world!",
+        "creation_date":now.strftime("%Y-%m-%d"),
+        "unread":True
+    }
+   
+    try:
+        sender=User.objects.get(id=current_user)
+        receiver=User.objects.get(id=user_conversation)
+        if not receiver or not sender:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+        data["sender"]=str(sender)
+        data["receiver"]=str(receiver)
+        new_write(sender,receiver,data)
+        data["uread"]=False
+        new_write(receiver,sender,data)    
+        return Response(status=status.HTTP_200_OK)
     except:
         return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)

@@ -1,14 +1,18 @@
 from django.contrib.auth.models import User
+from .models import Conversation,Message
 
 def update_unread(messages):
     for message in messages:
-        message.change_unread()
-        message.save()
+        print (message.unread)
+        if message.unread:
+            message.change_unread()
+            message.save()
     
     
 def update_list_unread(messages):
     for message in messages:
-        message["unread"]= False
+        if message["unread"]:
+            message["unread"]= False
     
 
 def delete(id1, id2, position):
@@ -29,3 +33,20 @@ def write(user1, user2, data):
     friend=user1.conversation_set.get(friend=user2.id)
     friend.message_set.create(sort=sort,sender=data["sender"],receiver=data["receiver"],subject=data["subject"],message=data["message"],date=data["creation_date"],unread=data["unread"])
     
+def new_write(user1,user2, data):
+    sender=User.objects.get(id=user1)
+    conversation=Conversation.objects.select_related("user").filter(user__id=user1, friend=user2)
+    receiver=User.objects.get(id=user2)
+    
+    
+    if not receiver or not sender:
+        raise "invalid_user"
+    
+    if not conversation.exists():
+        sender.conversation_set.create(friend=receiver.id)
+        conversation=Conversation.objects.select_related("user").filter(user__id=user1, friend=user2)
+        
+    conversation.message_set.create(sort=None,sender=data["sender"],receiver=data["receiver"],subject=data["subject"],message=data["message"],date=data["creation_date"],unread=data["unread"])
+    
+def change_later(user1,user2, data):
+    pass
