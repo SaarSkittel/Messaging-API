@@ -56,9 +56,7 @@ def get_all_unread_messages(request):
     current_user=get_user_from_token(request.headers["Authorization"])
     user_conversation=request.GET.get("id")
     try:
-        user=User.objects.get(id=current_user)
-        conversations= user.conversation_set.get(friend=user_conversation)
-        messages=conversations.message_set.filter(unread=True)
+        messages=Message.objects.select_related("conversation__user","conversation").filter(conversation__user__id=current_user, conversation__friend=user_conversation, unread=True)
     except:
         return Response(status=status.HTTP_422_UNPROCESSABLE_ENTITY)
     result=list(messages.values()).copy()
@@ -157,6 +155,11 @@ def token(request):
 
 @api_view(["GET"])
 def test(request):
+    """
+    things that need to be fixed:
+    - get the names of users in a diffrent way
+    
+    """
     current_user=6
     user_conversation=5
     now = datetime.now()
@@ -170,9 +173,8 @@ def test(request):
     }
    
     try:
-        sender=User.objects.get(id=current_user)
         receiver=User.objects.get(id=user_conversation)
-        if not receiver or not sender:
+        if not receiver:
             return Response(status=status.HTTP_404_NOT_FOUND)
         data["sender"]=str(sender)
         data["receiver"]=str(receiver)

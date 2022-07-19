@@ -34,19 +34,11 @@ def write(user1, user2, data):
     friend.message_set.create(sort=sort,sender=data["sender"],receiver=data["receiver"],subject=data["subject"],message=data["message"],date=data["creation_date"],unread=data["unread"])
     
 def new_write(user1,user2, data):
-    sender=User.objects.get(id=user1)
     conversation=Conversation.objects.select_related("user").filter(user__id=user1, friend=user2)
-    receiver=User.objects.get(id=user2)
-    
-    
-    if not receiver or not sender:
-        raise "invalid_user"
-    
     if not conversation.exists():
+        sender=User.objects.get(id=user1)
         sender.conversation_set.create(friend=receiver.id)
         conversation=Conversation.objects.select_related("user").filter(user__id=user1, friend=user2)
         
     conversation.message_set.create(sort=None,sender=data["sender"],receiver=data["receiver"],subject=data["subject"],message=data["message"],date=data["creation_date"],unread=data["unread"])
     
-def change_later(user1,user2, data):
-    pass
