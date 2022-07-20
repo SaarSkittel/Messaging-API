@@ -23,7 +23,9 @@ def get_user_from_token(token):
 def verify_access_token(token):
     try:
         access_token=AccessToken(token=token, verify=True)
+        
     except TokenError:
+       
         raise TokenError ## raise error if verification failed
 
 def verify_refresh_token(token):
