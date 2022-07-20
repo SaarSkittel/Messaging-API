@@ -2,7 +2,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from django.contrib.auth.models import User
 from .models import Message
-from .tools import update_unread,update_list_unread,delete,write,new_write
+from .tools import update_unread,update_list_unread,delete,write
 from .jwt import get_tokens_for_user,get_user_from_token,refresh_access_token,verify_refresh_token
 from rest_framework import status
 from django.conf import settings
@@ -11,6 +11,7 @@ from django.contrib.auth import authenticate
 from django.core.exceptions import PermissionDenied
 from datetime import datetime
 from rest_framework_simplejwt.exceptions import TokenError
+
 
 @api_view(["POST"])
 def write_message(request):
@@ -27,14 +28,14 @@ def write_message(request):
     try:
         sender=User.objects.get(id=get_user_from_token(request.headers["Authorization"]))
         receiver=User.objects.get(id=request.data["receiver"])
-        if not receiver or not sender:
-            return Response(status=status.HTTP_404_NOT_FOUND)
         data["sender"]=str(sender)
         data["receiver"]=str(receiver)
         write(sender,receiver,data)
         data["uread"]=False
         write(receiver,sender,data)    
         return Response(status=status.HTTP_200_OK)
+    except User.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
     except:
         return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
@@ -50,6 +51,7 @@ def get_all_messages(request):
         return Response(status=status.HTTP_422_UNPROCESSABLE_ENTITY)
     update_unread(messages)
     return Response(list(messages.values()))
+    
 
 @api_view(["GET"])
 def get_all_unread_messages(request):
@@ -70,9 +72,7 @@ def read_message(request):
     current_user=get_user_from_token(request.headers["Authorization"])
     user_conversation=request.GET.get("id")
     try:
-        user=User.objects.get(id=current_user)
-        conversations= user.conversation_set.get(friend=user_conversation)
-        message=conversations.message_set.order_by("sort").last()
+        message=Message.objects.select_related("conversation__user","conversation").filter(conversation__user__id=current_user, conversation__friend=user_conversation).order_by("sort").last()
     except:
         return Response(status=status.HTTP_422_UNPROCESSABLE_ENTITY)
     message.change_unread()
@@ -155,32 +155,14 @@ def token(request):
 
 @api_view(["GET"])
 def test(request):
-    """
-    things that need to be fixed:
-    - get the names of users in a diffrent way
-    
-    """
-    current_user=6
+    current_user=3
     user_conversation=5
-    now = datetime.now()
-    data={
-        "sender":None,
-        "receiver":None,
-        "subject":"hello",
-        "message":"hello world!",
-        "creation_date":now.strftime("%Y-%m-%d"),
-        "unread":True
-    }
-   
+  
     try:
-        receiver=User.objects.get(id=user_conversation)
-        if not receiver:
-            return Response(status=status.HTTP_404_NOT_FOUND)
-        data["sender"]=str(sender)
-        data["receiver"]=str(receiver)
-        new_write(sender,receiver,data)
-        data["uread"]=False
-        new_write(receiver,sender,data)    
-        return Response(status=status.HTTP_200_OK)
+        message=Message.objects.select_related("conversation__user","conversation").filter(conversation__user__id=current_user, conversation__friend=user_conversation).order_by("sort").last()
+       
     except:
-        return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        return Response(status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+    message.change_unread()
+    message.save()
+    return Response(model_to_dict(message))
