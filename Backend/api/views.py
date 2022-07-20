@@ -152,17 +152,3 @@ def token(request):
         return Response(status=status.HTTP_403_FORBIDDEN)
     except:
         return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
-@api_view(["GET"])
-def test(request):
-    current_user=3
-    user_conversation=5
-  
-    try:
-        message=Message.objects.select_related("conversation__user","conversation").filter(conversation__user__id=current_user, conversation__friend=user_conversation).order_by("sort").last()
-       
-    except:
-        return Response(status=status.HTTP_422_UNPROCESSABLE_ENTITY)
-    message.change_unread()
-    message.save()
-    return Response(model_to_dict(message))

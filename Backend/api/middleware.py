@@ -13,7 +13,7 @@ class Middleware:
         return response 
         
     def process_view(self,request,view_func,view_args,view_kargs):
-        paths=["/api/auth/","/api/register/","/api/token/", "/api/test/"]
+        paths=["/api/auth/","/api/register/","/api/token/"]
         if request.path not in paths and "/admin/" not in request.path and "/__debug__/" not in request.path:
             if not request.headers.get("Authorization"):
                 response = Response(
