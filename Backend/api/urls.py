@@ -9,5 +9,6 @@ urlpatterns=[
     path("delete_message",views.delete_message),
     path("auth",views.authentication),
     path("register",views.register),
-    path("token",views.token)
+    path("token",views.token),
+    path("test",views.create_task)
 ]

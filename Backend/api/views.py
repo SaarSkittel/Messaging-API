@@ -1,6 +1,9 @@
+from django.http import JsonResponse
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from django.contrib.auth.models import User
+
+from tasks.tasks import create_task
 from .models import Message
 from .tools import update_unread,update_list_unread,delete,write
 from .jwt import get_tokens_for_user,get_user_from_token,refresh_access_token,verify_refresh_token
@@ -152,3 +155,9 @@ def token(request):
         return Response(status=status.HTTP_403_FORBIDDEN)
     except:
         return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+def run_task(request):
+    if request.POST:
+        task_type = request.POST.get("type")
+        task = create_task.delay(int(task_type))
+        return JsonResponse({"task_id": task.id}, status=202)

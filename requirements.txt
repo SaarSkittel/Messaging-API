@@ -4,3 +4,6 @@ django-cors-headers
 djangorestframework-simplejwt
 django-environ
 django-debug-toolbar
+celery
+redis
+flower
