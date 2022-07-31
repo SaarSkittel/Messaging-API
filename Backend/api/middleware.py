@@ -13,8 +13,9 @@ class Middleware:
         return response 
         
     def process_view(self,request,view_func,view_args,view_kargs):
-        paths=["/api/auth/","/api/register/","/api/token/"]
-        if request.path not in paths and "/admin/" not in request.path and "/__debug__/" not in request.path:
+        paths=["/api/auth/","/api/register/","/api/token/","/api/test"]
+        if request.path not in paths and "/admin/" not in request.path and "/__debug__/" not in request.path and "/status/" not in request.path:
+            print("test")
             if not request.headers.get("Authorization"):
                 response = Response(
                     status=status.HTTP_400_BAD_REQUEST

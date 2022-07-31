@@ -3,3 +3,705 @@
 [2022-07-27 15:13:35,630: INFO/MainProcess] mingle: all alone
 [2022-07-27 15:13:35,639: INFO/MainProcess] celery@6968cc43fc2d ready.
 [2022-07-27 15:16:51,687: INFO/MainProcess] Events of group {task} enabled by remote.
+[2022-07-31 11:23:00,901: INFO/MainProcess] Connected to redis://redis:6379/0
+[2022-07-31 11:23:00,905: INFO/MainProcess] mingle: searching for neighbors
+[2022-07-31 11:23:01,912: INFO/MainProcess] mingle: all alone
+[2022-07-31 11:23:01,921: INFO/MainProcess] celery@6968cc43fc2d ready.
+[2022-07-31 11:23:06,725: INFO/MainProcess] Events of group {task} enabled by remote.
+[2022-07-31 11:35:32,002: INFO/MainProcess] Connected to redis://redis:6379/0
+[2022-07-31 11:35:32,004: INFO/MainProcess] mingle: searching for neighbors
+[2022-07-31 11:35:33,011: INFO/MainProcess] mingle: all alone
+[2022-07-31 11:35:33,020: INFO/MainProcess] celery@7cdc5d688f29 ready.
+[2022-07-31 11:35:38,137: INFO/MainProcess] Events of group {task} enabled by remote.
+[2022-07-31 11:48:22,937: ERROR/MainProcess] Received unregistered task of type 'tasks.tasks.create_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[100], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (80b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'tasks.tasks.create_task', 'id': 'cf9da9ef-7e4d-4917-8e1e-0bf5ad6c7258', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'cf9da9ef-7e4d-4917-8e1e-0bf5ad6c7258', 'parent_id': None, 'argsrepr': '(100,)', 'kwargsrepr': '{}', 'origin': 'gen36@410c2ab13f75', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tasks.tasks.create_task'
+[2022-07-31 11:49:13,796: ERROR/MainProcess] Received unregistered task of type 'tasks.tasks.create_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[100000], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (83b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'tasks.tasks.create_task', 'id': '6e6d03ff-73a4-4827-94b9-1375af60d153', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '6e6d03ff-73a4-4827-94b9-1375af60d153', 'parent_id': None, 'argsrepr': '(100000,)', 'kwargsrepr': '{}', 'origin': 'gen40@410c2ab13f75', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tasks.tasks.create_task'
+[2022-07-31 11:49:45,340: ERROR/MainProcess] Received unregistered task of type 'tasks.tasks.create_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[10], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (79b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'tasks.tasks.create_task', 'id': 'af498403-2a84-4f86-8802-a9ba9e97e196', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'af498403-2a84-4f86-8802-a9ba9e97e196', 'parent_id': None, 'argsrepr': '(10,)', 'kwargsrepr': '{}', 'origin': 'gen44@410c2ab13f75', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tasks.tasks.create_task'
+[2022-07-31 11:51:35,607: ERROR/MainProcess] Received unregistered task of type 'tasks.tasks.create_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[10000], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (82b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'tasks.tasks.create_task', 'id': 'e19d4a82-5efc-4846-9000-62d29a65011b', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'e19d4a82-5efc-4846-9000-62d29a65011b', 'parent_id': None, 'argsrepr': '(10000,)', 'kwargsrepr': '{}', 'origin': 'gen50@410c2ab13f75', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tasks.tasks.create_task'
+[2022-07-31 11:51:45,463: ERROR/MainProcess] Received unregistered task of type 'tasks.tasks.create_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[10000], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (82b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'tasks.tasks.create_task', 'id': '74392acb-8067-4898-a475-b45da9276d49', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '74392acb-8067-4898-a475-b45da9276d49', 'parent_id': None, 'argsrepr': '(10000,)', 'kwargsrepr': '{}', 'origin': 'gen50@410c2ab13f75', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tasks.tasks.create_task'
+[2022-07-31 11:52:20,232: ERROR/MainProcess] Received unregistered task of type 'tasks.tasks.create_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[1], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (78b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'tasks.tasks.create_task', 'id': '024f90fc-b2a7-4b97-81fa-b9cf51e8ef78', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '024f90fc-b2a7-4b97-81fa-b9cf51e8ef78', 'parent_id': None, 'argsrepr': '(1,)', 'kwargsrepr': '{}', 'origin': 'gen54@410c2ab13f75', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tasks.tasks.create_task'
+[2022-07-31 11:53:17,653: ERROR/MainProcess] Received unregistered task of type 'tasks.tasks.create_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[1], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (78b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'tasks.tasks.create_task', 'id': '14a57197-18a0-45ba-9c98-1ec6c98e091a', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '14a57197-18a0-45ba-9c98-1ec6c98e091a', 'parent_id': None, 'argsrepr': '(1,)', 'kwargsrepr': '{}', 'origin': 'gen58@410c2ab13f75', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tasks.tasks.create_task'
+[2022-07-31 11:53:32,200: ERROR/MainProcess] Received unregistered task of type 'tasks.tasks.create_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[1], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (78b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'tasks.tasks.create_task', 'id': '8f55c078-fdb5-454d-80ca-47fe7aa712a6', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '8f55c078-fdb5-454d-80ca-47fe7aa712a6', 'parent_id': None, 'argsrepr': '(1,)', 'kwargsrepr': '{}', 'origin': 'gen58@410c2ab13f75', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tasks.tasks.create_task'
+[2022-07-31 11:54:50,106: ERROR/MainProcess] Received unregistered task of type 'tasks.tasks.create_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[1], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (78b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'tasks.tasks.create_task', 'id': 'bee875d8-e9de-4105-bb0d-325b0542a9eb', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'bee875d8-e9de-4105-bb0d-325b0542a9eb', 'parent_id': None, 'argsrepr': '(1,)', 'kwargsrepr': '{}', 'origin': 'gen62@410c2ab13f75', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tasks.tasks.create_task'
+[2022-07-31 11:55:16,672: ERROR/MainProcess] Received unregistered task of type 'tasks.tasks.create_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[1], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (78b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'tasks.tasks.create_task', 'id': '8c9bbeea-4f65-4694-bf7a-4676e876f939', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '8c9bbeea-4f65-4694-bf7a-4676e876f939', 'parent_id': None, 'argsrepr': '(1,)', 'kwargsrepr': '{}', 'origin': 'gen62@410c2ab13f75', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tasks.tasks.create_task'
+[2022-07-31 11:55:21,731: ERROR/MainProcess] Received unregistered task of type 'tasks.tasks.create_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[1], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (78b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'tasks.tasks.create_task', 'id': '7d889ae2-9ae2-4857-9c19-fc8f1bc928b7', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '7d889ae2-9ae2-4857-9c19-fc8f1bc928b7', 'parent_id': None, 'argsrepr': '(1,)', 'kwargsrepr': '{}', 'origin': 'gen62@410c2ab13f75', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'tasks.tasks.create_task'
+[2022-07-31 12:22:38,826: INFO/MainProcess] Connected to redis://redis:6379/0
+[2022-07-31 12:22:38,829: INFO/MainProcess] mingle: searching for neighbors
+[2022-07-31 12:22:39,838: INFO/MainProcess] mingle: all alone
+[2022-07-31 12:22:39,847: INFO/MainProcess] celery@2d4c24f137e9 ready.
+[2022-07-31 12:22:45,672: INFO/MainProcess] Events of group {task} enabled by remote.
+[2022-07-31 12:24:39,287: ERROR/MainProcess] Received unregistered task of type 'api.tasks.create_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[1], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (78b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'api.tasks.create_task', 'id': '1c974a3b-abbd-4b09-96e9-d963444727e0', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '1c974a3b-abbd-4b09-96e9-d963444727e0', 'parent_id': None, 'argsrepr': '(1,)', 'kwargsrepr': '{}', 'origin': 'gen22@d222ec21a33e', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'api.tasks.create_task'
+[2022-07-31 12:24:53,683: ERROR/MainProcess] Received unregistered task of type 'api.tasks.create_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[1], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (78b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'api.tasks.create_task', 'id': '54f94094-ba6b-4cb6-94a9-ea836838e631', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '54f94094-ba6b-4cb6-94a9-ea836838e631', 'parent_id': None, 'argsrepr': '(1,)', 'kwargsrepr': '{}', 'origin': 'gen22@d222ec21a33e', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'api.tasks.create_task'
+[2022-07-31 12:25:15,789: ERROR/MainProcess] Received unregistered task of type 'api.tasks.create_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[1], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (78b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'api.tasks.create_task', 'id': 'aad034d9-1024-4471-b801-0404a1c184eb', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'aad034d9-1024-4471-b801-0404a1c184eb', 'parent_id': None, 'argsrepr': '(1,)', 'kwargsrepr': '{}', 'origin': 'gen26@d222ec21a33e', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'api.tasks.create_task'
+[2022-07-31 12:25:37,485: INFO/MainProcess] Connected to redis://redis:6379/0
+[2022-07-31 12:25:37,488: INFO/MainProcess] mingle: searching for neighbors
+[2022-07-31 12:25:38,496: INFO/MainProcess] mingle: all alone
+[2022-07-31 12:25:38,504: INFO/MainProcess] celery@2d4c24f137e9 ready.
+[2022-07-31 12:25:40,672: INFO/MainProcess] Events of group {task} enabled by remote.
+[2022-07-31 12:25:41,211: ERROR/MainProcess] Received unregistered task of type 'api.tasks.create_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[1], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (78b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'api.tasks.create_task', 'id': 'bdf73c61-8d15-4d28-837a-25c9635f8753', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'bdf73c61-8d15-4d28-837a-25c9635f8753', 'parent_id': None, 'argsrepr': '(1,)', 'kwargsrepr': '{}', 'origin': 'gen26@d222ec21a33e', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'api.tasks.create_task'
+[2022-07-31 12:30:02,487: ERROR/MainProcess] Received unregistered task of type 'api.tasks.create_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[1], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (78b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'api.tasks.create_task', 'id': '734c8bff-d2eb-467e-bef8-84293cb871bd', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '734c8bff-d2eb-467e-bef8-84293cb871bd', 'parent_id': None, 'argsrepr': '(1,)', 'kwargsrepr': '{}', 'origin': 'gen32@d222ec21a33e', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'api.tasks.create_task'
+[2022-07-31 12:30:16,253: ERROR/MainProcess] Received unregistered task of type 'api.tasks.create_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[1], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (78b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'api.tasks.create_task', 'id': '05edb057-60d6-4dc8-937c-bd62b633c775', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '05edb057-60d6-4dc8-937c-bd62b633c775', 'parent_id': None, 'argsrepr': '(1,)', 'kwargsrepr': '{}', 'origin': 'gen36@d222ec21a33e', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'api.tasks.create_task'
+[2022-07-31 12:30:20,367: ERROR/MainProcess] Received unregistered task of type 'api.tasks.create_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[1], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (78b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'api.tasks.create_task', 'id': '266689fc-3b58-4974-9d4f-f382224f9d60', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '266689fc-3b58-4974-9d4f-f382224f9d60', 'parent_id': None, 'argsrepr': '(1,)', 'kwargsrepr': '{}', 'origin': 'gen36@d222ec21a33e', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'api.tasks.create_task'
+[2022-07-31 12:32:00,440: ERROR/MainProcess] Received unregistered task of type 'api.tasks.create_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[1], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (78b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'api.tasks.create_task', 'id': '18b77db9-b52b-4dc8-961e-e74b149fb885', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '18b77db9-b52b-4dc8-961e-e74b149fb885', 'parent_id': None, 'argsrepr': '(1,)', 'kwargsrepr': '{}', 'origin': 'gen36@d222ec21a33e', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'api.tasks.create_task'
+[2022-07-31 12:32:21,775: ERROR/MainProcess] Received unregistered task of type 'api.tasks.create_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[1], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (78b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'api.tasks.create_task', 'id': 'b9bfb72e-1727-4097-aaba-6636e4a60f7c', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'b9bfb72e-1727-4097-aaba-6636e4a60f7c', 'parent_id': None, 'argsrepr': '(1,)', 'kwargsrepr': '{}', 'origin': 'gen36@d222ec21a33e', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'api.tasks.create_task'
+[2022-07-31 12:35:39,520: INFO/MainProcess] Connected to redis://redis:6379/0
+[2022-07-31 12:35:39,523: INFO/MainProcess] mingle: searching for neighbors
+[2022-07-31 12:35:40,531: INFO/MainProcess] mingle: all alone
+[2022-07-31 12:35:40,541: INFO/MainProcess] celery@9f16ec02eff6 ready.
+[2022-07-31 12:35:46,436: INFO/MainProcess] Events of group {task} enabled by remote.
+[2022-07-31 12:39:24,665: ERROR/MainProcess] Received unregistered task of type 'api.tasks.create_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[1], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (78b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'api.tasks.create_task', 'id': '14c6767b-232a-4ce8-aa8a-fcb4dc501411', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '14c6767b-232a-4ce8-aa8a-fcb4dc501411', 'parent_id': None, 'argsrepr': '(1,)', 'kwargsrepr': '{}', 'origin': 'gen12@50323e21c38b', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'api.tasks.create_task'
+[2022-07-31 12:39:44,613: ERROR/MainProcess] Received unregistered task of type 'api.tasks.create_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[1], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (78b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'api.tasks.create_task', 'id': 'cd3f9e71-8afc-4201-8ea5-63c5bd8b46cd', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'cd3f9e71-8afc-4201-8ea5-63c5bd8b46cd', 'parent_id': None, 'argsrepr': '(1,)', 'kwargsrepr': '{}', 'origin': 'gen12@50323e21c38b', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'api.tasks.create_task'
+[2022-07-31 12:40:22,643: ERROR/MainProcess] Received unregistered task of type 'api.tasks.create_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[1], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (78b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'api.tasks.create_task', 'id': 'b195b0b6-4a81-4432-bee7-74854af18761', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'b195b0b6-4a81-4432-bee7-74854af18761', 'parent_id': None, 'argsrepr': '(1,)', 'kwargsrepr': '{}', 'origin': 'gen12@50323e21c38b', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'api.tasks.create_task'
+[2022-07-31 12:50:03,730: ERROR/MainProcess] Received unregistered task of type 'api.tasks.create_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[1], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (78b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'api.tasks.create_task', 'id': 'ef1675aa-0beb-47e9-9e1e-707ca8d5a5a9', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'ef1675aa-0beb-47e9-9e1e-707ca8d5a5a9', 'parent_id': None, 'argsrepr': '(1,)', 'kwargsrepr': '{}', 'origin': 'gen20@50323e21c38b', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'api.tasks.create_task'
+[2022-07-31 12:50:15,250: ERROR/MainProcess] Received unregistered task of type 'api.tasks.create_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[1], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (78b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'api.tasks.create_task', 'id': '9d0e2905-2939-4691-8439-029ad0be7193', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '9d0e2905-2939-4691-8439-029ad0be7193', 'parent_id': None, 'argsrepr': '(1,)', 'kwargsrepr': '{}', 'origin': 'gen20@50323e21c38b', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'api.tasks.create_task'
+[2022-07-31 12:50:21,979: INFO/MainProcess] Connected to redis://redis:6379/0
+[2022-07-31 12:50:21,982: INFO/MainProcess] mingle: searching for neighbors
+[2022-07-31 12:50:22,989: INFO/MainProcess] mingle: all alone
+[2022-07-31 12:50:22,998: INFO/MainProcess] celery@9f16ec02eff6 ready.
+[2022-07-31 12:50:26,129: ERROR/MainProcess] Received unregistered task of type 'api.tasks.create_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[1], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (78b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'api.tasks.create_task', 'id': 'a1dae31e-ba9e-4319-8040-f844f52f15be', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'a1dae31e-ba9e-4319-8040-f844f52f15be', 'parent_id': None, 'argsrepr': '(1,)', 'kwargsrepr': '{}', 'origin': 'gen20@50323e21c38b', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'api.tasks.create_task'
+[2022-07-31 12:50:26,434: INFO/MainProcess] Events of group {task} enabled by remote.
+[2022-07-31 12:55:54,208: INFO/MainProcess] Connected to redis://redis:6379/0
+[2022-07-31 12:55:54,212: INFO/MainProcess] mingle: searching for neighbors
+[2022-07-31 12:55:55,219: INFO/MainProcess] mingle: all alone
+[2022-07-31 12:55:55,227: INFO/MainProcess] celery@33e8c72d1c85 ready.
+[2022-07-31 12:56:00,328: INFO/MainProcess] Events of group {task} enabled by remote.
+[2022-07-31 12:56:42,846: ERROR/MainProcess] Received unregistered task of type 'api.tasks.create_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[1], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (78b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'api.tasks.create_task', 'id': '74d81e12-1310-4217-87a8-0c47c6f57fe8', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '74d81e12-1310-4217-87a8-0c47c6f57fe8', 'parent_id': None, 'argsrepr': '(1,)', 'kwargsrepr': '{}', 'origin': 'gen8@3fc56089fdb2', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'api.tasks.create_task'
+[2022-07-31 12:58:56,942: INFO/MainProcess] Connected to redis://redis:6379/0
+[2022-07-31 12:58:56,945: INFO/MainProcess] mingle: searching for neighbors
+[2022-07-31 12:58:57,953: INFO/MainProcess] mingle: all alone
+[2022-07-31 12:58:57,963: INFO/MainProcess] celery@c6451cf39d1b ready.
+[2022-07-31 12:59:03,104: INFO/MainProcess] Events of group {task} enabled by remote.
+[2022-07-31 13:00:27,890: ERROR/MainProcess] Received unregistered task of type 'api.tasks.create_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[1], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (78b)
+
+Thw full contents of the message headers:
+{'lang': 'py', 'task': 'api.tasks.create_task', 'id': '70111ff3-e55f-4fa1-a8dc-0fe2261c0835', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '70111ff3-e55f-4fa1-a8dc-0fe2261c0835', 'parent_id': None, 'argsrepr': '(1,)', 'kwargsrepr': '{}', 'origin': 'gen8@a93713feaaaf', 'ignore_result': False}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'celery'}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 591, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'api.tasks.create_task'
+[2022-07-31 13:07:43,586: INFO/MainProcess] Connected to redis://redis:6379/0
+[2022-07-31 13:07:43,591: INFO/MainProcess] mingle: searching for neighbors
+[2022-07-31 13:07:44,598: INFO/MainProcess] mingle: all alone
+[2022-07-31 13:07:44,610: WARNING/MainProcess] /usr/local/lib/python3.10/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+
+[2022-07-31 13:07:44,610: INFO/MainProcess] celery@225d3aba86e9 ready.
+[2022-07-31 13:07:49,908: INFO/MainProcess] Events of group {task} enabled by remote.
+[2022-07-31 13:08:47,258: INFO/MainProcess] Task api.tasks.create_task[c01b1f61-9808-4570-a569-ef0aee7a753a] received
+[2022-07-31 13:08:47,260: WARNING/ForkPoolWorker-7] 1
+[2022-07-31 13:08:47,261: WARNING/ForkPoolWorker-7] test
+[2022-07-31 13:08:57,274: INFO/ForkPoolWorker-7] Task api.tasks.create_task[c01b1f61-9808-4570-a569-ef0aee7a753a] succeeded in 10.014243599999645s: True
+[2022-07-31 13:09:54,954: INFO/MainProcess] Task api.tasks.create_task[92d0e728-31b8-4dd0-940b-fd6845afa265] received
+[2022-07-31 13:09:54,956: WARNING/ForkPoolWorker-7] 1
+[2022-07-31 13:09:54,957: WARNING/ForkPoolWorker-7] test
+[2022-07-31 13:10:04,968: INFO/ForkPoolWorker-7] Task api.tasks.create_task[92d0e728-31b8-4dd0-940b-fd6845afa265] succeeded in 10.012117300000682s: True
+[2022-07-31 13:16:32,680: INFO/MainProcess] Task api.tasks.create_task[bb9627d7-f75f-4fe1-83a8-be8ba50bc6b8] received
+[2022-07-31 13:16:32,683: WARNING/ForkPoolWorker-7] 1
+[2022-07-31 13:16:32,683: WARNING/ForkPoolWorker-7] test
+[2022-07-31 13:16:42,693: INFO/ForkPoolWorker-7] Task api.tasks.create_task[bb9627d7-f75f-4fe1-83a8-be8ba50bc6b8] succeeded in 10.010143600000447s: True
+[2022-07-31 13:16:50,155: INFO/MainProcess] Task api.tasks.create_task[054022ae-30e4-4d7b-a0d9-0ff1ec86d341] received
+[2022-07-31 13:16:50,157: WARNING/ForkPoolWorker-7] 1
+[2022-07-31 13:16:50,158: WARNING/ForkPoolWorker-7] test
+[2022-07-31 13:17:00,169: INFO/ForkPoolWorker-7] Task api.tasks.create_task[054022ae-30e4-4d7b-a0d9-0ff1ec86d341] succeeded in 10.012539900000775s: True
+[2022-07-31 13:22:28,624: INFO/MainProcess] Task api.tasks.create_task[2461d35f-bcab-4df4-9610-9a122c06e962] received
+[2022-07-31 13:22:28,626: WARNING/ForkPoolWorker-7] 1
+[2022-07-31 13:22:28,627: WARNING/ForkPoolWorker-7] test
+[2022-07-31 13:22:38,638: INFO/ForkPoolWorker-7] Task api.tasks.create_task[2461d35f-bcab-4df4-9610-9a122c06e962] succeeded in 10.01213960000041s: True
+[2022-07-31 13:32:49,818: INFO/MainProcess] Task api.tasks.create_task[037519ae-3d4a-4a27-b468-4f1611d851a9] received
+[2022-07-31 13:32:49,820: WARNING/ForkPoolWorker-7] 1
+[2022-07-31 13:32:49,821: WARNING/ForkPoolWorker-7] test
+[2022-07-31 13:32:59,828: INFO/ForkPoolWorker-7] Task api.tasks.create_task[037519ae-3d4a-4a27-b468-4f1611d851a9] succeeded in 10.007516799999394s: True
+[2022-07-31 13:40:36,463: INFO/MainProcess] Connected to redis://redis:6379/0
+[2022-07-31 13:40:36,468: INFO/MainProcess] mingle: searching for neighbors
+[2022-07-31 13:40:37,476: INFO/MainProcess] mingle: all alone
+[2022-07-31 13:40:37,485: WARNING/MainProcess] /usr/local/lib/python3.10/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+
+[2022-07-31 13:40:37,486: INFO/MainProcess] celery@225d3aba86e9 ready.
+[2022-07-31 13:40:39,909: INFO/MainProcess] Events of group {task} enabled by remote.
+[2022-07-31 13:50:52,759: INFO/MainProcess] Task api.tasks.create_task[0241b802-d033-4842-ad92-674b5d840422] received
+[2022-07-31 13:50:52,763: WARNING/ForkPoolWorker-7] 1
+[2022-07-31 13:50:52,764: WARNING/ForkPoolWorker-7] test
+[2022-07-31 13:51:02,778: INFO/ForkPoolWorker-7] Task api.tasks.create_task[0241b802-d033-4842-ad92-674b5d840422] succeeded in 10.015765799998917s: 'Fuck Yeah!'

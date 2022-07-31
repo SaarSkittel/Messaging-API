@@ -1,9 +1,7 @@
 import time
+from server.celery import app
 
-from celery import shared_task
-
-
-@shared_task
+@app.task
 def create_task(task_type):
     time.sleep(int(task_type) * 10)
-    return True
+    return "Fuck Yeah!"

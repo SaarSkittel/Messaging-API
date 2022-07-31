@@ -2,8 +2,7 @@ from django.http import JsonResponse
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from django.contrib.auth.models import User
-
-from tasks.tasks import create_task
+from .tasks import *
 from .models import Message
 from .tools import update_unread,update_list_unread,delete,write
 from .jwt import get_tokens_for_user,get_user_from_token,refresh_access_token,verify_refresh_token
@@ -14,7 +13,7 @@ from django.contrib.auth import authenticate
 from django.core.exceptions import PermissionDenied
 from datetime import datetime
 from rest_framework_simplejwt.exceptions import TokenError
-
+from celery.result import AsyncResult
 
 @api_view(["POST"])
 def write_message(request):
@@ -156,8 +155,18 @@ def token(request):
     except:
         return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
+@api_view(["GET"])
 def run_task(request):
-    if request.POST:
-        task_type = request.POST.get("type")
-        task = create_task.delay(int(task_type))
-        return JsonResponse({"task_id": task.id}, status=202)
+    task = create_task.delay(1)
+    return Response(data={"task_id": task.id}, status=status.HTTP_202_ACCEPTED)
+    
+@api_view(["GET"])
+def get_status(request, task_id):
+    task_result = AsyncResult(task_id)
+    result = {
+        "task_id": task_id,
+        "task_status": task_result.status,
+        "task_result": task_result.result,
+        "task_get":task_result.get()
+    }
+    return Response(data=result, status=status.HTTP_200_OK)

@@ -10,5 +10,6 @@ urlpatterns=[
     path("auth",views.authentication),
     path("register",views.register),
     path("token",views.token),
-    path("test",views.create_task)
+    path("test",views.run_task),
+    path("status/<str:task_id>",views.get_status),
 ]
