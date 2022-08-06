@@ -4,11 +4,11 @@ from .serializers import MessageSerializer
 from .jwt import get_user_from_token
 from datetime import datetime
 
-def create_user(user_data):
+def register(user_data):
     user = User.objects.create_user(user_data["username"],user_data["email"], user_data["password"])
     user.save()
 
-def message_write(token, id, data):
+def write_message(token, id, data):
     sender=User.objects.get(id=get_user_from_token(token))
     receiver=User.objects.get(id=id)
     now = datetime.now().strftime("%Y-%m-%d")    
@@ -19,7 +19,7 @@ def message_write(token, id, data):
     data["uread"]=False
     write(receiver,sender,data)    
 
-def read_last_message(token, id):
+def read_message(token, id):
     current_user=get_user_from_token(token)
     message=Message.objects.select_related("conversation__user","conversation").filter(conversation__user__id=current_user, conversation__friend=id).order_by("sort").last()
     message.change_unread()
@@ -34,15 +34,15 @@ def update_unread(messages):
             message.save()
 
 
-def all_messages(token,id):
+def get_all_messages(token,id):
     current_user=get_user_from_token(token)
     messages=Message.objects.select_related("conversation__user","conversation").filter(conversation__user__id=current_user, conversation__friend=id)
     update_unread(messages)
     serializer=MessageSerializer(messages,many=True)
     return serializer.data
 
-def all_unread_messages(token,id):
-    current_user=get_user_from_token(token=en)
+def get_all_unread_messages(token,id):
+    current_user=get_user_from_token(token)
     messages=Message.objects.select_related("conversation__user","conversation").filter(conversation__user__id=current_user, conversation__friend=id, unread=True)
     result=list(messages.values()).copy()
     update_list_unread(result)
@@ -50,7 +50,7 @@ def all_unread_messages(token,id):
     update_unread(messages)
     return serializer.data
 
-def message_delete(token, id, message_position):
+def delete_message(token, id, message_position):
     current_user=get_user_from_token(token)
     delete(current_user,id,message_position)
     delete(id,current_user,message_position)

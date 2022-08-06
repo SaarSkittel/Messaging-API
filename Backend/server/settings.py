@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'api',
-    'debug_toolbar'
+    'debug_toolbar',
+    
 ]
 
 MIDDLEWARE = [
@@ -181,7 +182,7 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 }
-
+CELERY_IMPORTS =["api.tasks"]
 CELERY_BROKER_URL = os.environ.get("CELERY_BROKER", "redis://redis:6379/0")
 CELERY_RESULT_BACKEND = os.environ.get("CELERY_BROKER", "redis://redis:6379/0")
 CELERY_ACCEPT_CONTENT = ['application/json']

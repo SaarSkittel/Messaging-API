@@ -7,7 +7,7 @@ urlpatterns=[
     path("get_all_unread/",views.get_all_unread_messages),
     path("get_message",views.read_message),
     path("delete_message",views.delete_message),
-    path("auth",views.authentication),
+    path("auth/",views.authentication),
     path("register",views.register),
     path("token",views.token),
     path("test",views.run_task),

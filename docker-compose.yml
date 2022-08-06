@@ -18,7 +18,7 @@ services:
       - redis
    celery:
     build: ./
-    command: celery -A celery worker --loglevel=info --logfile=./logs/celery.log
+    command: celery -A server.celery worker --loglevel=DEBUG --logfile=./logs/celery.log
     volumes:
       - ./Backend:/code
     environment:

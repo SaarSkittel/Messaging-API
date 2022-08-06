@@ -1,3 +1,4 @@
+import imp
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from django.contrib.auth.models import User
@@ -10,6 +11,8 @@ from django.contrib.auth import authenticate
 from django.core.exceptions import PermissionDenied
 from rest_framework_simplejwt.exceptions import TokenError
 from celery.result import AsyncResult
+from .tasks import *
+
 
 ### DONE ###
 # async
@@ -18,8 +21,10 @@ def get_all_messages(request):
     try:
         token=request.headers["Authorization"]
         id=request.GET.get("id")
-        data=all_messages(token,id)
-        return Response(data)
+        ## data=all_messages(token,id)
+        ## return Response(data)
+        task = get_all_messages_task.delay(token,id)
+        return Response(data={"task_id": task.id}, status=status.HTTP_202_ACCEPTED)
     except:
         return Response(status=status.HTTP_422_UNPROCESSABLE_ENTITY)
     
@@ -30,8 +35,10 @@ def get_all_unread_messages(request):
     try:
         token=request.headers["Authorization"]
         id=request.GET.get("id")
-        data= all_unread_messages(token,id)
-        return Response(data)
+       ## data= all_unread_messages(token,id)
+       ## return Response(data)
+        task = get_all_unread_messages_task.delay(token,id)
+        return Response(data={"task_id": task.id}, status=status.HTTP_202_ACCEPTED)
     except:
         return Response(status=status.HTTP_422_UNPROCESSABLE_ENTITY)
     
@@ -42,8 +49,10 @@ def delete_message(request):
         token=request.headers["Authorization"]
         id=request.data["user_conversation"]
         message_position=request.data["sort"]
-        message_delete(token, id, message_position)
-        return Response(status=status.HTTP_200_OK)
+        ##message_delete(token, id, message_position)
+        ##return Response(status=status.HTTP_200_OK)
+        task = delete_message_task.delay(token,id)
+        return Response(data={"task_id": task.id}, status=status.HTTP_202_ACCEPTED)
     except:
         return Response(status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
@@ -53,8 +62,10 @@ def read_message(request):
     try:
         token=request.headers["Authorization"]
         id=request.GET.get("id")
-        data=read_last_message(token, id)
-        return Response(data)
+        ##data=read_last_message(token, id)
+        ##return Response(data)
+        task = read_message_task.delay(token,id)
+        return Response(data={"task_id": task.id}, status=status.HTTP_202_ACCEPTED)
     except:
         return Response(status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
@@ -72,8 +83,10 @@ def write_message(request):
             "creation_date":None,
             "unread":True
         }
-        message_write
-        return Response(status=status.HTTP_200_OK)
+        ##message_write(token,id,data)
+        ##return Response(status=status.HTTP_200_OK)
+        task = write_message_task.delay(token,id)
+        return Response(data={"task_id": task.id}, status=status.HTTP_202_ACCEPTED)
     except User.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
     except:
@@ -92,8 +105,11 @@ def register(request):
         if  not user_data["username"] and not user_data["email"] and not user_data["password"]:
             return Response(status=status.HTTP_400_BAD_REQUEST)
        
-        create_user(user_data)
-        return Response(status=status.HTTP_201_CREATED)
+        ##create_user(user_data)
+        ##return Response(status=status.HTTP_201_CREATED)
+        task = register_task.delay(user_data)
+        return Response(data={"task_id": task.id}, status=status.HTTP_202_ACCEPTED)
+        
     except:
         return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
@@ -157,8 +173,7 @@ def get_status(request, task_id):
     result = {
         "task_id": task_id,
         "task_status": task_result.status,
-        "task_result": task_result.result,
-        "task_get":task_result.get()
+        "task_result": task_result.result
     }
     return Response(data=result, status=status.HTTP_200_OK)
 
