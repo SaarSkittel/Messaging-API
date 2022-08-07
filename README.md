@@ -1,7 +1,7 @@
 # Messaging-API
 ## Introduction
 Messaging RESTful API developed in Python using Django Rest Framework. 
-The project utilaze SimpleJWT, SQLite DB, middleware and RESTdul API requests.
+Stack- Django, Django rest Framework, Celery, Celery Flower, Redis, SQLite and DJDT.
 
 ## API requests
 
@@ -29,5 +29,13 @@ The refresh token is also given when the user logs in and it is stored in the co
 
 • SQLite- Handles all conversations,messages and users data using Django bulit-in user system and custom models. Optinized queries using select_related to minimize the amout of SQL queries needed for a singke action.  
 
+• DJDT- Used to optimize requests queries and maximize response time of requests. 
+
 • Middleware- Middleware was used to insure tokens validation before executing requests.
+
+• Celery- Creatad Celery worker to make the API requests and resppnse work Asynchronous.
+
+• Celery Flower- Monitors the Celery worker and tasks.
+
+• Redis- Used as Celery Broker to store results from tasks.
 
