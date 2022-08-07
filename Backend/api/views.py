@@ -2,8 +2,6 @@ import imp
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from django.contrib.auth.models import User
-from .tasks import *
-from .queries import all_messages, all_unread_messages, message_delete,read_last_message,message_write,create_user
 from .jwt import get_tokens_for_user,refresh_access_token,verify_refresh_token
 from rest_framework import status
 from django.conf import settings
@@ -11,65 +9,70 @@ from django.contrib.auth import authenticate
 from django.core.exceptions import PermissionDenied
 from rest_framework_simplejwt.exceptions import TokenError
 from celery.result import AsyncResult
-from .tasks import *
+from .tasks import delete_message_task, get_all_messages_task, get_all_unread_messages_task,read_message_task,write_message_task,register_task, create_task
 
 
 ### DONE ###
-# async
+# Async
 @api_view(["GET"])
 def get_all_messages(request):
     try:
         token=request.headers["Authorization"]
         id=request.GET.get("id")
-        ## data=all_messages(token,id)
-        ## return Response(data)
-        task = get_all_messages_task.delay(token,id)
-        return Response(data={"task_id": task.id}, status=status.HTTP_202_ACCEPTED)
+        task = get_all_messages_task.apply_async(args=(token,id))
+        return Response(task.get())
+    except User.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
     except:
-        return Response(status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+        return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+   
     
 
-# async
+# Async
 @api_view(["GET"])
 def get_all_unread_messages(request):    
     try:
         token=request.headers["Authorization"]
         id=request.GET.get("id")
-       ## data= all_unread_messages(token,id)
-       ## return Response(data)
-        task = get_all_unread_messages_task.delay(token,id)
-        return Response(data={"task_id": task.id}, status=status.HTTP_202_ACCEPTED)
+        task = get_all_unread_messages_task.apply_async(args=(token,id))
+        return Response(task.get())
+    except User.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
     except:
-        return Response(status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+        return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
     
-# async
+# Async
 @api_view(["DELETE"])
 def delete_message(request):
     try:
         token=request.headers["Authorization"]
         id=request.data["user_conversation"]
         message_position=request.data["sort"]
-        ##message_delete(token, id, message_position)
-        ##return Response(status=status.HTTP_200_OK)
-        task = delete_message_task.delay(token,id)
-        return Response(data={"task_id": task.id}, status=status.HTTP_202_ACCEPTED)
+        task = delete_message_task.apply_async(args=(token,id,message_position))
+        return Response(status=status.HTTP_200_OK)
+    except User.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
     except:
-        return Response(status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+        return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-# async
+    
+
+# Async
 @api_view(["GET"])
 def read_message(request):
     try:
         token=request.headers["Authorization"]
         id=request.GET.get("id")
-        ##data=read_last_message(token, id)
-        ##return Response(data)
-        task = read_message_task.delay(token,id)
-        return Response(data={"task_id": task.id}, status=status.HTTP_202_ACCEPTED)
+        task = read_message_task.apply_async(args=(token,id))
+        return Response(task.get())
+    except User.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
     except:
-        return Response(status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+        return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-# async
+# Async
 @api_view(["POST"])
 def write_message(request):
     try:
@@ -85,8 +88,8 @@ def write_message(request):
         }
         ##message_write(token,id,data)
         ##return Response(status=status.HTTP_200_OK)
-        task = write_message_task.delay(token,id)
-        return Response(data={"task_id": task.id}, status=status.HTTP_202_ACCEPTED)
+        task = write_message_task.apply_async(args=(token, id, data))
+        return Response(status=status.HTTP_200_OK)
     except User.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
     except:
@@ -96,20 +99,15 @@ def write_message(request):
 @api_view(["POST"])
 def register(request):
     try:
-        user_data={
-            "username":request.data["username"],
-            "email":request.data["email"],
-            "password":request.data["password"]
-        }
-
-        if  not user_data["username"] and not user_data["email"] and not user_data["password"]:
-            return Response(status=status.HTTP_400_BAD_REQUEST)
-       
-        ##create_user(user_data)
-        ##return Response(status=status.HTTP_201_CREATED)
-        task = register_task.delay(user_data)
-        return Response(data={"task_id": task.id}, status=status.HTTP_202_ACCEPTED)
         
+        username=request.data["username"]
+        email=request.data["email"]
+        password=request.data["password"]
+
+        if  not username and not email and not password:
+            return Response(status=status.HTTP_400_BAD_REQUEST)
+        task = register_task.apply_async(args=(username, email, password))
+        return Response(status=status.HTTP_200_OK)
     except:
         return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 

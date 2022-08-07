@@ -4,8 +4,8 @@ from .serializers import MessageSerializer
 from .jwt import get_user_from_token
 from datetime import datetime
 
-def register(user_data):
-    user = User.objects.create_user(user_data["username"],user_data["email"], user_data["password"])
+def register(username,email,password):
+    user = User.objects.create_user(username,email,password)
     user.save()
 
 def write_message(token, id, data):

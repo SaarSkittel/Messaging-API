@@ -16,7 +16,9 @@ services:
       - CELERY_BACKEND=redis://redis:6379/0
     depends_on:
       - redis
+
    celery:
+    container_name: celery
     build: ./
     command: celery -A server.celery worker --loglevel=DEBUG --logfile=./logs/celery.log
     volumes:
@@ -32,9 +34,11 @@ services:
       - redis
 
    redis:
+    container_name: redis
     image: redis:6-alpine
 
-   dashboard:
+   celery_flower:
+    container_name: celery-flower
     build: 
       context: ./
     command:  celery -A celery flower --port=5555 --broker=redis://redis:6379/0
