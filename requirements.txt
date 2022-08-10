@@ -7,3 +7,4 @@ django-debug-toolbar
 celery
 redis
 flower
+psycopg2

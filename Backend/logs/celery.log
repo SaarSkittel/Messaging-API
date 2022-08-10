@@ -11031,3 +11031,769 @@ TypeError: register_task() takes 1 positional argument but 3 were given
 [2022-08-07 11:13:32,417: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
 [2022-08-07 11:13:37,417: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
 [2022-08-07 11:13:42,418: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:15:18,204: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2022-08-10 12:15:18,207: DEBUG/MainProcess] | Worker: Building graph...
+[2022-08-10 12:15:18,208: DEBUG/MainProcess] | Worker: New boot order: {Beat, Timer, Hub, Pool, Autoscaler, StateDB, Consumer}
+[2022-08-10 12:15:18,218: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2022-08-10 12:15:18,219: DEBUG/MainProcess] | Consumer: Building graph...
+[2022-08-10 12:15:18,226: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Events, Heart, Mingle, Tasks, Control, Gossip, Agent, event loop}
+[2022-08-10 12:15:18,246: DEBUG/MainProcess] | Worker: Starting Hub
+[2022-08-10 12:15:18,247: DEBUG/MainProcess] ^-- substep ok
+[2022-08-10 12:15:18,247: DEBUG/MainProcess] | Worker: Starting Pool
+[2022-08-10 12:15:18,582: DEBUG/MainProcess] ^-- substep ok
+[2022-08-10 12:15:18,583: DEBUG/MainProcess] | Worker: Starting Consumer
+[2022-08-10 12:15:18,584: DEBUG/MainProcess] | Consumer: Starting Connection
+[2022-08-10 12:15:18,590: INFO/MainProcess] Connected to redis://redis:6379/0
+[2022-08-10 12:15:18,591: DEBUG/MainProcess] ^-- substep ok
+[2022-08-10 12:15:18,592: DEBUG/MainProcess] | Consumer: Starting Events
+[2022-08-10 12:15:18,594: DEBUG/MainProcess] ^-- substep ok
+[2022-08-10 12:15:18,595: DEBUG/MainProcess] | Consumer: Starting Heart
+[2022-08-10 12:15:18,597: DEBUG/MainProcess] ^-- substep ok
+[2022-08-10 12:15:18,598: DEBUG/MainProcess] | Consumer: Starting Mingle
+[2022-08-10 12:15:18,598: INFO/MainProcess] mingle: searching for neighbors
+[2022-08-10 12:15:19,605: INFO/MainProcess] mingle: all alone
+[2022-08-10 12:15:19,606: DEBUG/MainProcess] ^-- substep ok
+[2022-08-10 12:15:19,606: DEBUG/MainProcess] | Consumer: Starting Tasks
+[2022-08-10 12:15:19,611: DEBUG/MainProcess] ^-- substep ok
+[2022-08-10 12:15:19,611: DEBUG/MainProcess] | Consumer: Starting Control
+[2022-08-10 12:15:19,615: DEBUG/MainProcess] ^-- substep ok
+[2022-08-10 12:15:19,615: DEBUG/MainProcess] | Consumer: Starting Gossip
+[2022-08-10 12:15:19,619: DEBUG/MainProcess] ^-- substep ok
+[2022-08-10 12:15:19,620: DEBUG/MainProcess] | Consumer: Starting event loop
+[2022-08-10 12:15:19,621: DEBUG/MainProcess] | Worker: Hub.register Pool...
+[2022-08-10 12:15:19,622: WARNING/MainProcess] /usr/local/lib/python3.10/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+
+[2022-08-10 12:15:19,623: INFO/MainProcess] celery@b1045adfcf92 ready.
+[2022-08-10 12:15:19,623: DEBUG/MainProcess] basic.qos: prefetch_count->32
+[2022-08-10 12:15:20,066: DEBUG/MainProcess] pidbox received method heartbeat() [reply_to:None ticket:None]
+[2022-08-10 12:15:20,066: DEBUG/MainProcess] Heartbeat requested by remote.
+[2022-08-10 12:15:20,071: DEBUG/MainProcess] pidbox received method revoked() [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': '9f70ad4a-a797-35bf-8670-a62a335ee7d2'} ticket:9ea2d3bd-980f-4b8d-b418-26e17bc4b7db]
+[2022-08-10 12:15:20,074: DEBUG/MainProcess] pidbox received method conf(with_defaults=False) [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': '003c5ae1-0b82-3176-93d4-25fbd46f5836'} ticket:9be51097-6d3e-468c-a07a-456f8e0b5348]
+[2022-08-10 12:15:20,089: DEBUG/MainProcess] pidbox received method reserved() [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': '98efbdd5-8495-326b-bff2-111b6dcc2a23'} ticket:350d1697-b8f8-48b7-9ca6-f4f341813f4d]
+[2022-08-10 12:15:20,091: DEBUG/MainProcess] pidbox received method stats() [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': '543f2d7d-5504-38ab-ab56-1dd676e57807'} ticket:99623323-dbb3-4ec9-a000-a1ba7f799650]
+[2022-08-10 12:15:20,092: DEBUG/MainProcess] pidbox received method registered(taskinfoitems=[]) [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': 'c77ef536-2891-3b5b-b618-e1d2bfcdcecc'} ticket:a05f11ee-6e11-4823-8d7b-7b2bbfad2ed8]
+[2022-08-10 12:15:20,094: DEBUG/MainProcess] pidbox received method active_queues() [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': '57641f60-daba-346f-bd25-fc379f8486f8'} ticket:a3f1eac8-791d-46f4-8671-4775178d2f42]
+[2022-08-10 12:15:20,096: DEBUG/MainProcess] pidbox received method scheduled() [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': '5b413aa0-dc0d-3375-b998-8b3c13863109'} ticket:a28fcef5-0d92-4922-b2ac-8e485d88ed7f]
+[2022-08-10 12:15:20,097: DEBUG/MainProcess] pidbox received method active(safe=None) [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': '19f0e3d7-6a57-3797-81b1-46962bfe3ec7'} ticket:d89d2c34-8bca-4db8-ac63-76d5a4a3ccd0]
+[2022-08-10 12:15:25,032: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:15:25,033: INFO/MainProcess] Events of group {task} enabled by remote.
+[2022-08-10 12:15:30,034: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:15:35,033: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:15:40,032: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:15:45,033: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:15:50,035: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:15:55,032: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:16:00,034: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:16:05,032: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:16:10,034: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:16:15,033: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:16:20,033: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:16:25,032: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:16:30,033: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:16:35,032: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:16:40,033: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:16:45,034: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:16:50,033: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:16:55,033: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:17:00,032: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:17:05,032: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:17:10,033: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:17:15,033: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:17:20,033: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:17:25,033: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:17:30,032: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:17:35,032: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:17:40,033: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:17:45,032: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:17:50,032: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:17:55,034: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:18:00,033: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:18:05,033: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:18:10,034: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:18:15,034: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:18:20,035: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:18:25,032: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:18:30,034: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:18:35,033: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:18:40,033: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:18:45,033: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:18:50,033: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:18:55,032: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:19:00,034: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:19:05,032: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:19:10,033: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:19:15,032: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:19:20,033: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:19:25,033: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:19:30,032: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:19:35,032: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:19:40,033: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:19:45,032: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:19:50,033: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:19:55,033: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:20:00,033: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:20:05,033: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:20:10,033: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:20:15,032: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:20:20,033: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:20:25,032: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:20:30,035: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:20:35,033: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:20:40,032: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-08-10 12:20:44,833: DEBUG/MainProcess] | Worker: Closing Hub...
+[2022-08-10 12:20:44,834: DEBUG/MainProcess] | Worker: Closing Pool...
+[2022-08-10 12:20:44,835: DEBUG/MainProcess] | Worker: Closing Consumer...
+[2022-08-10 12:20:44,835: DEBUG/MainProcess] | Worker: Stopping Consumer...
+[2022-08-10 12:20:44,836: DEBUG/MainProcess] | Consumer: Closing Connection...
+[2022-08-10 12:20:44,837: DEBUG/MainProcess] | Consumer: Closing Events...
+[2022-08-10 12:20:44,837: DEBUG/MainProcess] | Consumer: Closing Heart...
+[2022-08-10 12:20:44,838: DEBUG/MainProcess] | Consumer: Closing Mingle...
+[2022-08-10 12:20:44,838: DEBUG/MainProcess] | Consumer: Closing Tasks...
+[2022-08-10 12:20:44,839: DEBUG/MainProcess] | Consumer: Closing Control...
+[2022-08-10 12:20:44,840: DEBUG/MainProcess] | Consumer: Closing Gossip...
+[2022-08-10 12:20:44,840: DEBUG/MainProcess] | Consumer: Closing event loop...
+[2022-08-10 12:20:44,841: DEBUG/MainProcess] | Consumer: Stopping event loop...
+[2022-08-10 12:20:44,841: DEBUG/MainProcess] | Consumer: Stopping Gossip...
+[2022-08-10 12:20:44,844: DEBUG/MainProcess] | Consumer: Stopping Control...
+[2022-08-10 12:20:44,846: DEBUG/MainProcess] | Consumer: Stopping Tasks...
+[2022-08-10 12:20:44,846: DEBUG/MainProcess] Canceling task consumer...
+[2022-08-10 12:20:44,847: DEBUG/MainProcess] | Consumer: Stopping Mingle...
+[2022-08-10 12:20:44,847: DEBUG/MainProcess] | Consumer: Stopping Heart...
+[2022-08-10 12:20:44,848: DEBUG/MainProcess] | Consumer: Stopping Events...
+[2022-08-10 12:20:44,849: DEBUG/MainProcess] | Consumer: Stopping Connection...
+[2022-08-10 12:20:44,849: DEBUG/MainProcess] | Worker: Stopping Pool...
+[2022-08-10 12:20:45,856: DEBUG/MainProcess] | Worker: Stopping Hub...
+[2022-08-10 12:20:45,857: DEBUG/MainProcess] | Consumer: Shutdown Gossip...
+[2022-08-10 12:20:45,857: DEBUG/MainProcess] | Consumer: Shutdown Control...
+[2022-08-10 12:20:45,858: DEBUG/MainProcess] | Consumer: Shutdown Tasks...
+[2022-08-10 12:20:45,859: DEBUG/MainProcess] Canceling task consumer...
+[2022-08-10 12:20:45,859: DEBUG/MainProcess] Closing consumer channel...
+[2022-08-10 12:20:45,860: DEBUG/MainProcess] | Consumer: Shutdown Heart...
+[2022-08-10 12:20:45,860: DEBUG/MainProcess] | Consumer: Shutdown Events...
+[2022-08-10 12:20:45,861: DEBUG/MainProcess] | Consumer: Shutdown Connection...
+[2022-08-10 12:20:45,862: DEBUG/MainProcess] removing tasks from inqueue until task handler finished
+[2022-08-10 12:26:24,123: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2022-08-10 12:26:24,125: DEBUG/MainProcess] | Worker: Building graph...
+[2022-08-10 12:26:24,125: DEBUG/MainProcess] | Worker: New boot order: {StateDB, Timer, Hub, Pool, Autoscaler, Beat, Consumer}
+[2022-08-10 12:26:24,130: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2022-08-10 12:26:24,130: DEBUG/MainProcess] | Consumer: Building graph...
+[2022-08-10 12:26:24,136: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Events, Mingle, Tasks, Control, Agent, Gossip, Heart, event loop}
+[2022-08-10 12:26:24,141: DEBUG/MainProcess] | Worker: Starting Hub
+[2022-08-10 12:26:24,141: DEBUG/MainProcess] ^-- substep ok
+[2022-08-10 12:26:24,142: DEBUG/MainProcess] | Worker: Starting Pool
+[2022-08-10 12:26:24,461: DEBUG/MainProcess] ^-- substep ok
+[2022-08-10 12:26:24,462: DEBUG/MainProcess] | Worker: Starting Consumer
+[2022-08-10 12:26:24,463: DEBUG/MainProcess] | Consumer: Starting Connection
+[2022-08-10 12:26:34,476: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 2.00 seconds... (1/100)
+
+[2022-08-10 12:26:46,490: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 4.00 seconds... (2/100)
+
+[2022-08-10 12:27:00,507: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 6.00 seconds... (3/100)
+
+[2022-08-10 12:27:16,521: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 8.00 seconds... (4/100)
+
+[2022-08-10 12:27:34,542: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 10.00 seconds... (5/100)
+
+[2022-08-10 12:27:54,561: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 12.00 seconds... (6/100)
+
+[2022-08-10 12:28:16,584: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 14.00 seconds... (7/100)
+
+[2022-08-10 12:28:40,611: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 16.00 seconds... (8/100)
+
+[2022-08-10 12:29:06,641: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 18.00 seconds... (9/100)
+
+[2022-08-10 12:29:34,671: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 20.00 seconds... (10/100)
+
+[2022-08-10 12:30:04,701: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 22.00 seconds... (11/100)
+
+[2022-08-10 12:30:36,733: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 24.00 seconds... (12/100)
+
+[2022-08-10 12:31:10,771: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 26.00 seconds... (13/100)
+
+[2022-08-10 12:31:46,812: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 28.00 seconds... (14/100)
+
+[2022-08-10 12:32:24,851: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 30.00 seconds... (15/100)
+
+[2022-08-10 12:33:04,896: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 32.00 seconds... (16/100)
+
+[2022-08-10 12:33:46,942: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 32.00 seconds... (16/100)
+
+[2022-08-10 12:33:56,165: DEBUG/MainProcess] | Worker: Closing Hub...
+[2022-08-10 12:33:56,165: DEBUG/MainProcess] | Worker: Closing Pool...
+[2022-08-10 12:33:56,166: DEBUG/MainProcess] | Worker: Closing Consumer...
+[2022-08-10 12:33:56,167: DEBUG/MainProcess] | Worker: Stopping Consumer...
+[2022-08-10 12:33:56,167: DEBUG/MainProcess] | Worker: Stopping Pool...
+[2022-08-10 12:33:57,239: DEBUG/MainProcess] | Worker: Stopping Hub...
+[2022-08-10 12:33:57,239: DEBUG/MainProcess] | Consumer: Shutdown Heart...
+[2022-08-10 12:33:57,240: DEBUG/MainProcess] | Consumer: Shutdown Gossip...
+[2022-08-10 12:33:57,240: DEBUG/MainProcess] | Consumer: Shutdown Control...
+[2022-08-10 12:33:57,240: DEBUG/MainProcess] | Consumer: Shutdown Tasks...
+[2022-08-10 12:33:57,241: DEBUG/MainProcess] | Consumer: Shutdown Events...
+[2022-08-10 12:33:57,241: DEBUG/MainProcess] | Consumer: Shutdown Connection...
+[2022-08-10 12:33:57,242: DEBUG/MainProcess] removing tasks from inqueue until task handler finished
+[2022-08-10 12:34:00,808: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2022-08-10 12:34:00,810: DEBUG/MainProcess] | Worker: Building graph...
+[2022-08-10 12:34:00,811: DEBUG/MainProcess] | Worker: New boot order: {Beat, StateDB, Timer, Hub, Pool, Autoscaler, Consumer}
+[2022-08-10 12:34:00,817: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2022-08-10 12:34:00,818: DEBUG/MainProcess] | Consumer: Building graph...
+[2022-08-10 12:34:00,824: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Events, Mingle, Gossip, Heart, Agent, Tasks, Control, event loop}
+[2022-08-10 12:34:00,830: DEBUG/MainProcess] | Worker: Starting Hub
+[2022-08-10 12:34:00,833: DEBUG/MainProcess] ^-- substep ok
+[2022-08-10 12:34:00,833: DEBUG/MainProcess] | Worker: Starting Pool
+[2022-08-10 12:34:01,227: DEBUG/MainProcess] ^-- substep ok
+[2022-08-10 12:34:01,229: DEBUG/MainProcess] | Worker: Starting Consumer
+[2022-08-10 12:34:01,229: DEBUG/MainProcess] | Consumer: Starting Connection
+[2022-08-10 12:34:11,243: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 2.00 seconds... (1/100)
+
+[2022-08-10 12:34:23,258: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 4.00 seconds... (2/100)
+
+[2022-08-10 12:34:37,274: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 6.00 seconds... (3/100)
+
+[2022-08-10 12:34:53,293: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 8.00 seconds... (4/100)
+
+[2022-08-10 12:35:11,314: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 10.00 seconds... (5/100)
+
+[2022-08-10 12:35:31,338: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 12.00 seconds... (6/100)
+
+[2022-08-10 12:35:53,364: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 14.00 seconds... (7/100)
+
+[2022-08-10 12:36:17,392: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 16.00 seconds... (8/100)
+
+[2022-08-10 12:36:43,424: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 18.00 seconds... (9/100)
+
+[2022-08-10 12:37:11,451: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 20.00 seconds... (10/100)
+
+[2022-08-10 12:37:41,485: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 22.00 seconds... (11/100)
+
+[2022-08-10 12:38:13,523: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 24.00 seconds... (12/100)
+
+[2022-08-10 12:38:47,561: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 26.00 seconds... (13/100)
+
+[2022-08-10 12:39:23,603: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 28.00 seconds... (14/100)
+
+[2022-08-10 12:40:01,641: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 30.00 seconds... (15/100)
+
+[2022-08-10 12:40:21,615: DEBUG/MainProcess] | Worker: Closing Hub...
+[2022-08-10 12:40:21,616: DEBUG/MainProcess] | Worker: Closing Pool...
+[2022-08-10 12:40:21,617: DEBUG/MainProcess] | Worker: Closing Consumer...
+[2022-08-10 12:40:21,617: DEBUG/MainProcess] | Worker: Stopping Consumer...
+[2022-08-10 12:40:21,618: DEBUG/MainProcess] | Worker: Stopping Pool...
+[2022-08-10 12:40:22,624: DEBUG/MainProcess] | Worker: Stopping Hub...
+[2022-08-10 12:40:22,625: DEBUG/MainProcess] | Consumer: Shutdown Control...
+[2022-08-10 12:40:22,625: DEBUG/MainProcess] | Consumer: Shutdown Tasks...
+[2022-08-10 12:40:22,626: DEBUG/MainProcess] | Consumer: Shutdown Heart...
+[2022-08-10 12:40:22,627: DEBUG/MainProcess] | Consumer: Shutdown Gossip...
+[2022-08-10 12:40:22,627: DEBUG/MainProcess] | Consumer: Shutdown Events...
+[2022-08-10 12:40:22,627: DEBUG/MainProcess] | Consumer: Shutdown Connection...
+[2022-08-10 12:40:22,628: DEBUG/MainProcess] removing tasks from inqueue until task handler finished
+[2022-08-10 12:40:26,503: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2022-08-10 12:40:26,504: DEBUG/MainProcess] | Worker: Building graph...
+[2022-08-10 12:40:26,505: DEBUG/MainProcess] | Worker: New boot order: {Timer, Hub, Pool, Autoscaler, StateDB, Beat, Consumer}
+[2022-08-10 12:40:26,509: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2022-08-10 12:40:26,510: DEBUG/MainProcess] | Consumer: Building graph...
+[2022-08-10 12:40:26,515: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Agent, Events, Heart, Mingle, Gossip, Tasks, Control, event loop}
+[2022-08-10 12:40:26,521: DEBUG/MainProcess] | Worker: Starting Hub
+[2022-08-10 12:40:26,522: DEBUG/MainProcess] ^-- substep ok
+[2022-08-10 12:40:26,522: DEBUG/MainProcess] | Worker: Starting Pool
+[2022-08-10 12:40:26,848: DEBUG/MainProcess] ^-- substep ok
+[2022-08-10 12:40:26,850: DEBUG/MainProcess] | Worker: Starting Consumer
+[2022-08-10 12:40:26,851: DEBUG/MainProcess] | Consumer: Starting Connection
+[2022-08-10 12:40:36,866: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 2.00 seconds... (1/100)
+
+[2022-08-10 12:40:48,880: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 4.00 seconds... (2/100)
+
+[2022-08-10 12:41:02,896: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 6.00 seconds... (3/100)
+
+[2022-08-10 12:41:18,915: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 8.00 seconds... (4/100)
+
+[2022-08-10 12:41:36,936: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 10.00 seconds... (5/100)
+
+[2022-08-10 12:41:56,958: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 12.00 seconds... (6/100)
+
+[2022-08-10 12:42:18,981: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 14.00 seconds... (7/100)
+
+[2022-08-10 12:42:43,006: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 16.00 seconds... (8/100)
+
+[2022-08-10 12:43:09,036: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 18.00 seconds... (9/100)
+
+[2022-08-10 12:43:37,067: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 20.00 seconds... (10/100)
+
+[2022-08-10 12:44:07,101: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 22.00 seconds... (11/100)
+
+[2022-08-10 12:44:39,138: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 24.00 seconds... (12/100)
+
+[2022-08-10 12:45:13,179: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 26.00 seconds... (13/100)
+
+[2022-08-10 12:45:49,216: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 28.00 seconds... (14/100)
+
+[2022-08-10 12:46:27,256: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 30.00 seconds... (15/100)
+
+[2022-08-10 12:47:07,301: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 32.00 seconds... (16/100)
+
+[2022-08-10 12:47:49,349: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 32.00 seconds... (16/100)
+
+[2022-08-10 12:48:31,394: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 32.00 seconds... (16/100)
+
+[2022-08-10 12:49:13,442: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 32.00 seconds... (16/100)
+
+[2022-08-10 12:49:55,492: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 32.00 seconds... (16/100)
+
+[2022-08-10 12:50:37,541: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 32.00 seconds... (16/100)
+
+[2022-08-10 12:51:19,586: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 32.00 seconds... (16/100)
+
+[2022-08-10 12:52:01,632: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 32.00 seconds... (16/100)
+
+[2022-08-10 12:52:15,590: DEBUG/MainProcess] | Worker: Closing Hub...
+[2022-08-10 12:52:15,591: DEBUG/MainProcess] | Worker: Closing Pool...
+[2022-08-10 12:52:15,592: DEBUG/MainProcess] | Worker: Closing Consumer...
+[2022-08-10 12:52:15,593: DEBUG/MainProcess] | Worker: Stopping Consumer...
+[2022-08-10 12:52:15,593: DEBUG/MainProcess] | Worker: Stopping Pool...
+[2022-08-10 12:52:16,598: DEBUG/MainProcess] | Worker: Stopping Hub...
+[2022-08-10 12:52:16,599: DEBUG/MainProcess] | Consumer: Shutdown Control...
+[2022-08-10 12:52:16,599: DEBUG/MainProcess] | Consumer: Shutdown Tasks...
+[2022-08-10 12:52:16,600: DEBUG/MainProcess] | Consumer: Shutdown Gossip...
+[2022-08-10 12:52:16,600: DEBUG/MainProcess] | Consumer: Shutdown Heart...
+[2022-08-10 12:52:16,601: DEBUG/MainProcess] | Consumer: Shutdown Events...
+[2022-08-10 12:52:16,602: DEBUG/MainProcess] | Consumer: Shutdown Connection...
+[2022-08-10 12:52:16,603: DEBUG/MainProcess] removing tasks from inqueue until task handler finished
+[2022-08-10 12:52:20,475: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2022-08-10 12:52:20,476: DEBUG/MainProcess] | Worker: Building graph...
+[2022-08-10 12:52:20,477: DEBUG/MainProcess] | Worker: New boot order: {Timer, Hub, Pool, Autoscaler, Beat, StateDB, Consumer}
+[2022-08-10 12:52:20,481: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2022-08-10 12:52:20,482: DEBUG/MainProcess] | Consumer: Building graph...
+[2022-08-10 12:52:20,487: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Agent, Events, Mingle, Gossip, Tasks, Control, Heart, event loop}
+[2022-08-10 12:52:20,492: DEBUG/MainProcess] | Worker: Starting Hub
+[2022-08-10 12:52:20,493: DEBUG/MainProcess] ^-- substep ok
+[2022-08-10 12:52:20,493: DEBUG/MainProcess] | Worker: Starting Pool
+[2022-08-10 12:52:20,815: DEBUG/MainProcess] ^-- substep ok
+[2022-08-10 12:52:20,816: DEBUG/MainProcess] | Worker: Starting Consumer
+[2022-08-10 12:52:20,817: DEBUG/MainProcess] | Consumer: Starting Connection
+[2022-08-10 12:52:30,826: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 2.00 seconds... (1/100)
+
+[2022-08-10 12:52:42,840: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 4.00 seconds... (2/100)
+
+[2022-08-10 12:52:56,854: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 6.00 seconds... (3/100)
+
+[2022-08-10 12:53:12,871: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 8.00 seconds... (4/100)
+
+[2022-08-10 12:53:30,891: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 10.00 seconds... (5/100)
+
+[2022-08-10 12:53:50,915: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 12.00 seconds... (6/100)
+
+[2022-08-10 12:54:12,940: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 14.00 seconds... (7/100)
+
+[2022-08-10 12:54:36,967: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 16.00 seconds... (8/100)
+
+[2022-08-10 12:55:02,996: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 18.00 seconds... (9/100)
+
+[2022-08-10 12:55:31,027: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 20.00 seconds... (10/100)
+
+[2022-08-10 12:56:01,061: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 22.00 seconds... (11/100)
+
+[2022-08-10 12:56:33,097: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 24.00 seconds... (12/100)
+
+[2022-08-10 12:57:07,136: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 26.00 seconds... (13/100)
+
+[2022-08-10 12:57:43,177: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 28.00 seconds... (14/100)
+
+[2022-08-10 12:58:21,218: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 30.00 seconds... (15/100)
+
+[2022-08-10 12:59:01,267: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 32.00 seconds... (16/100)
+
+[2022-08-10 12:59:43,313: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 32.00 seconds... (16/100)
+
+[2022-08-10 13:00:25,361: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 32.00 seconds... (16/100)
+
+[2022-08-10 13:01:07,403: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 32.00 seconds... (16/100)
+
+[2022-08-10 13:01:49,451: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 32.00 seconds... (16/100)
+
+[2022-08-10 13:02:31,496: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 32.00 seconds... (16/100)
+
+[2022-08-10 13:02:44,358: DEBUG/MainProcess] | Worker: Closing Hub...
+[2022-08-10 13:02:44,358: DEBUG/MainProcess] | Worker: Closing Pool...
+[2022-08-10 13:02:44,359: DEBUG/MainProcess] | Worker: Closing Consumer...
+[2022-08-10 13:02:44,360: DEBUG/MainProcess] | Worker: Stopping Consumer...
+[2022-08-10 13:02:44,360: DEBUG/MainProcess] | Worker: Stopping Pool...
+[2022-08-10 13:02:45,369: DEBUG/MainProcess] | Worker: Stopping Hub...
+[2022-08-10 13:02:45,369: DEBUG/MainProcess] | Consumer: Shutdown Heart...
+[2022-08-10 13:02:45,370: DEBUG/MainProcess] | Consumer: Shutdown Control...
+[2022-08-10 13:02:45,371: DEBUG/MainProcess] | Consumer: Shutdown Tasks...
+[2022-08-10 13:02:45,372: DEBUG/MainProcess] | Consumer: Shutdown Gossip...
+[2022-08-10 13:02:45,373: DEBUG/MainProcess] | Consumer: Shutdown Events...
+[2022-08-10 13:02:45,373: DEBUG/MainProcess] | Consumer: Shutdown Connection...
+[2022-08-10 13:02:45,374: DEBUG/MainProcess] removing tasks from inqueue until task handler finished
+[2022-08-10 13:03:10,100: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2022-08-10 13:03:10,102: DEBUG/MainProcess] | Worker: Building graph...
+[2022-08-10 13:03:10,103: DEBUG/MainProcess] | Worker: New boot order: {Timer, Hub, Pool, Autoscaler, StateDB, Beat, Consumer}
+[2022-08-10 13:03:10,108: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2022-08-10 13:03:10,109: DEBUG/MainProcess] | Consumer: Building graph...
+[2022-08-10 13:03:10,114: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Events, Mingle, Tasks, Control, Agent, Heart, Gossip, event loop}
+[2022-08-10 13:03:10,120: DEBUG/MainProcess] | Worker: Starting Hub
+[2022-08-10 13:03:10,121: DEBUG/MainProcess] ^-- substep ok
+[2022-08-10 13:03:10,122: DEBUG/MainProcess] | Worker: Starting Pool
+[2022-08-10 13:03:10,458: DEBUG/MainProcess] ^-- substep ok
+[2022-08-10 13:03:10,459: DEBUG/MainProcess] | Worker: Starting Consumer
+[2022-08-10 13:03:10,459: DEBUG/MainProcess] | Consumer: Starting Connection
+[2022-08-10 13:03:20,473: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 2.00 seconds... (1/100)
+
+[2022-08-10 13:03:32,487: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 4.00 seconds... (2/100)
+
+[2022-08-10 13:03:46,501: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 6.00 seconds... (3/100)
+
+[2022-08-10 13:04:02,516: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 8.00 seconds... (4/100)
+
+[2022-08-10 13:04:20,538: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 10.00 seconds... (5/100)
+
+[2022-08-10 13:04:40,562: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 12.00 seconds... (6/100)
+
+[2022-08-10 13:05:02,589: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 14.00 seconds... (7/100)
+
+[2022-08-10 13:05:26,611: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 16.00 seconds... (8/100)
+
+[2022-08-10 13:05:52,642: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 18.00 seconds... (9/100)
+
+[2022-08-10 13:06:20,676: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 20.00 seconds... (10/100)
+
+[2022-08-10 13:06:50,714: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 22.00 seconds... (11/100)
+
+[2022-08-10 13:07:22,751: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 24.00 seconds... (12/100)
+
+[2022-08-10 13:07:56,790: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 26.00 seconds... (13/100)
+
+[2022-08-10 13:08:32,833: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 28.00 seconds... (14/100)
+
+[2022-08-10 13:09:10,876: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 30.00 seconds... (15/100)
+
+[2022-08-10 13:09:50,924: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 32.00 seconds... (16/100)
+
+[2022-08-10 13:10:32,970: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 32.00 seconds... (16/100)
+
+[2022-08-10 13:11:15,020: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 32.00 seconds... (16/100)
+
+[2022-08-10 13:11:57,069: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 32.00 seconds... (16/100)
+
+[2022-08-10 13:12:39,114: DEBUG/MainProcess] | Worker: Closing Hub...
+[2022-08-10 13:12:39,114: DEBUG/MainProcess] | Worker: Closing Pool...
+[2022-08-10 13:12:39,115: DEBUG/MainProcess] | Worker: Closing Consumer...
+[2022-08-10 13:12:39,115: DEBUG/MainProcess] | Worker: Stopping Consumer...
+[2022-08-10 13:12:39,116: DEBUG/MainProcess] | Worker: Stopping Pool...
+[2022-08-10 13:12:40,124: DEBUG/MainProcess] | Worker: Stopping Hub...
+[2022-08-10 13:12:40,125: DEBUG/MainProcess] | Consumer: Shutdown Gossip...
+[2022-08-10 13:12:40,126: DEBUG/MainProcess] | Consumer: Shutdown Heart...
+[2022-08-10 13:12:40,126: DEBUG/MainProcess] | Consumer: Shutdown Control...
+[2022-08-10 13:12:40,127: DEBUG/MainProcess] | Consumer: Shutdown Tasks...
+[2022-08-10 13:12:40,127: DEBUG/MainProcess] | Consumer: Shutdown Events...
+[2022-08-10 13:12:40,128: DEBUG/MainProcess] | Consumer: Shutdown Connection...
+[2022-08-10 13:12:40,128: DEBUG/MainProcess] removing tasks from inqueue until task handler finished
+[2022-08-10 13:12:43,808: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2022-08-10 13:12:43,810: DEBUG/MainProcess] | Worker: Building graph...
+[2022-08-10 13:12:43,810: DEBUG/MainProcess] | Worker: New boot order: {Beat, StateDB, Timer, Hub, Pool, Autoscaler, Consumer}
+[2022-08-10 13:12:43,815: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2022-08-10 13:12:43,815: DEBUG/MainProcess] | Consumer: Building graph...
+[2022-08-10 13:12:43,821: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Events, Mingle, Gossip, Agent, Tasks, Control, Heart, event loop}
+[2022-08-10 13:12:43,827: DEBUG/MainProcess] | Worker: Starting Hub
+[2022-08-10 13:12:43,827: DEBUG/MainProcess] ^-- substep ok
+[2022-08-10 13:12:43,828: DEBUG/MainProcess] | Worker: Starting Pool
+[2022-08-10 13:12:44,129: DEBUG/MainProcess] ^-- substep ok
+[2022-08-10 13:12:44,130: DEBUG/MainProcess] | Worker: Starting Consumer
+[2022-08-10 13:12:44,131: DEBUG/MainProcess] | Consumer: Starting Connection
+[2022-08-10 13:12:54,145: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 2.00 seconds... (1/100)
+
+[2022-08-10 13:13:06,156: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 4.00 seconds... (2/100)
+
+[2022-08-10 13:13:20,173: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 6.00 seconds... (3/100)
+
+[2022-08-10 13:13:36,191: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 8.00 seconds... (4/100)
+
+[2022-08-10 13:13:54,211: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 10.00 seconds... (5/100)
+
+[2022-08-10 13:14:14,234: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 12.00 seconds... (6/100)
+
+[2022-08-10 13:14:36,260: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 14.00 seconds... (7/100)
+
+[2022-08-10 13:15:00,283: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 16.00 seconds... (8/100)
+
+[2022-08-10 13:15:26,314: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 18.00 seconds... (9/100)
+
+[2022-08-10 13:15:41,625: DEBUG/MainProcess] | Worker: Closing Hub...
+[2022-08-10 13:15:41,626: DEBUG/MainProcess] | Worker: Closing Pool...
+[2022-08-10 13:15:41,627: DEBUG/MainProcess] | Worker: Closing Consumer...
+[2022-08-10 13:15:41,627: DEBUG/MainProcess] | Worker: Stopping Consumer...
+[2022-08-10 13:15:41,628: DEBUG/MainProcess] | Worker: Stopping Pool...
+[2022-08-10 13:15:42,636: DEBUG/MainProcess] | Worker: Stopping Hub...
+[2022-08-10 13:15:42,636: DEBUG/MainProcess] | Consumer: Shutdown Heart...
+[2022-08-10 13:15:42,637: DEBUG/MainProcess] | Consumer: Shutdown Control...
+[2022-08-10 13:15:42,637: DEBUG/MainProcess] | Consumer: Shutdown Tasks...
+[2022-08-10 13:15:42,638: DEBUG/MainProcess] | Consumer: Shutdown Gossip...
+[2022-08-10 13:15:42,638: DEBUG/MainProcess] | Consumer: Shutdown Events...
+[2022-08-10 13:15:42,639: DEBUG/MainProcess] | Consumer: Shutdown Connection...
+[2022-08-10 13:15:42,640: DEBUG/MainProcess] removing tasks from inqueue until task handler finished
+[2022-08-10 13:15:46,524: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2022-08-10 13:15:46,527: DEBUG/MainProcess] | Worker: Building graph...
+[2022-08-10 13:15:46,528: DEBUG/MainProcess] | Worker: New boot order: {Timer, Hub, Pool, Autoscaler, Beat, StateDB, Consumer}
+[2022-08-10 13:15:46,532: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2022-08-10 13:15:46,533: DEBUG/MainProcess] | Consumer: Building graph...
+[2022-08-10 13:15:46,539: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Events, Mingle, Gossip, Heart, Agent, Tasks, Control, event loop}
+[2022-08-10 13:15:46,545: DEBUG/MainProcess] | Worker: Starting Hub
+[2022-08-10 13:15:46,546: DEBUG/MainProcess] ^-- substep ok
+[2022-08-10 13:15:46,547: DEBUG/MainProcess] | Worker: Starting Pool
+[2022-08-10 13:15:46,893: DEBUG/MainProcess] ^-- substep ok
+[2022-08-10 13:15:46,894: DEBUG/MainProcess] | Worker: Starting Consumer
+[2022-08-10 13:15:46,895: DEBUG/MainProcess] | Consumer: Starting Connection
+[2022-08-10 13:15:56,908: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 2.00 seconds... (1/100)
+
+[2022-08-10 13:16:08,923: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 4.00 seconds... (2/100)
+
+[2022-08-10 13:16:22,939: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 6.00 seconds... (3/100)
+
+[2022-08-10 13:16:38,954: DEBUG/MainProcess] | Worker: Closing Hub...
+[2022-08-10 13:16:38,954: DEBUG/MainProcess] | Worker: Closing Pool...
+[2022-08-10 13:16:38,955: DEBUG/MainProcess] | Worker: Closing Consumer...
+[2022-08-10 13:16:38,955: DEBUG/MainProcess] | Worker: Stopping Consumer...
+[2022-08-10 13:16:38,956: DEBUG/MainProcess] | Worker: Stopping Pool...
+[2022-08-10 13:16:39,967: DEBUG/MainProcess] | Worker: Stopping Hub...
+[2022-08-10 13:16:39,967: DEBUG/MainProcess] | Consumer: Shutdown Control...
+[2022-08-10 13:16:39,968: DEBUG/MainProcess] | Consumer: Shutdown Tasks...
+[2022-08-10 13:16:39,968: DEBUG/MainProcess] | Consumer: Shutdown Heart...
+[2022-08-10 13:16:39,968: DEBUG/MainProcess] | Consumer: Shutdown Gossip...
+[2022-08-10 13:16:39,969: DEBUG/MainProcess] | Consumer: Shutdown Events...
+[2022-08-10 13:16:39,969: DEBUG/MainProcess] | Consumer: Shutdown Connection...
+[2022-08-10 13:16:39,970: DEBUG/MainProcess] removing tasks from inqueue until task handler finished
+[2022-08-10 13:16:45,096: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2022-08-10 13:16:45,098: DEBUG/MainProcess] | Worker: Building graph...
+[2022-08-10 13:16:45,099: DEBUG/MainProcess] | Worker: New boot order: {Beat, Timer, Hub, Pool, Autoscaler, StateDB, Consumer}
+[2022-08-10 13:16:45,103: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2022-08-10 13:16:45,104: DEBUG/MainProcess] | Consumer: Building graph...
+[2022-08-10 13:16:45,109: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Agent, Events, Heart, Mingle, Gossip, Tasks, Control, event loop}
+[2022-08-10 13:16:45,115: DEBUG/MainProcess] | Worker: Starting Hub
+[2022-08-10 13:16:45,116: DEBUG/MainProcess] ^-- substep ok
+[2022-08-10 13:16:45,116: DEBUG/MainProcess] | Worker: Starting Pool
+[2022-08-10 13:16:45,429: DEBUG/MainProcess] ^-- substep ok
+[2022-08-10 13:16:45,430: DEBUG/MainProcess] | Worker: Starting Consumer
+[2022-08-10 13:16:45,431: DEBUG/MainProcess] | Consumer: Starting Connection
+[2022-08-10 13:16:55,440: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 2.00 seconds... (1/100)
+
+[2022-08-10 13:17:07,455: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 4.00 seconds... (2/100)
+
+[2022-08-10 13:17:21,472: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 6.00 seconds... (3/100)
+
+[2022-08-10 13:17:37,491: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 8.00 seconds... (4/100)
+
+[2022-08-10 13:17:55,512: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 10.00 seconds... (5/100)
+
+[2022-08-10 13:18:05,513: DEBUG/MainProcess] | Worker: Closing Hub...
+[2022-08-10 13:18:05,513: DEBUG/MainProcess] | Worker: Closing Pool...
+[2022-08-10 13:18:05,514: DEBUG/MainProcess] | Worker: Closing Consumer...
+[2022-08-10 13:18:05,514: DEBUG/MainProcess] | Worker: Stopping Consumer...
+[2022-08-10 13:18:05,515: DEBUG/MainProcess] | Worker: Stopping Pool...
+[2022-08-10 13:18:06,524: DEBUG/MainProcess] | Worker: Stopping Hub...
+[2022-08-10 13:18:06,525: DEBUG/MainProcess] | Consumer: Shutdown Control...
+[2022-08-10 13:18:06,525: DEBUG/MainProcess] | Consumer: Shutdown Tasks...
+[2022-08-10 13:18:06,526: DEBUG/MainProcess] | Consumer: Shutdown Gossip...
+[2022-08-10 13:18:06,527: DEBUG/MainProcess] | Consumer: Shutdown Heart...
+[2022-08-10 13:18:06,527: DEBUG/MainProcess] | Consumer: Shutdown Events...
+[2022-08-10 13:18:06,528: DEBUG/MainProcess] | Consumer: Shutdown Connection...
+[2022-08-10 13:18:06,529: DEBUG/MainProcess] removing tasks from inqueue until task handler finished
+[2022-08-10 13:19:40,144: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2022-08-10 13:19:40,146: DEBUG/MainProcess] | Worker: Building graph...
+[2022-08-10 13:19:40,147: DEBUG/MainProcess] | Worker: New boot order: {StateDB, Beat, Timer, Hub, Pool, Autoscaler, Consumer}
+[2022-08-10 13:19:40,153: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2022-08-10 13:19:40,154: DEBUG/MainProcess] | Consumer: Building graph...
+[2022-08-10 13:19:40,161: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Agent, Events, Mingle, Tasks, Control, Gossip, Heart, event loop}
+[2022-08-10 13:19:40,168: DEBUG/MainProcess] | Worker: Starting Hub
+[2022-08-10 13:19:40,169: DEBUG/MainProcess] ^-- substep ok
+[2022-08-10 13:19:40,170: DEBUG/MainProcess] | Worker: Starting Pool
+[2022-08-10 13:19:40,562: DEBUG/MainProcess] ^-- substep ok
+[2022-08-10 13:19:40,563: DEBUG/MainProcess] | Worker: Starting Consumer
+[2022-08-10 13:19:40,563: DEBUG/MainProcess] | Consumer: Starting Connection
+[2022-08-10 13:19:50,577: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 2.00 seconds... (1/100)
+
+[2022-08-10 13:20:02,591: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 4.00 seconds... (2/100)
+
+[2022-08-10 13:20:16,606: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 6.00 seconds... (3/100)
+
+[2022-08-10 13:20:32,625: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 8.00 seconds... (4/100)
+
+[2022-08-10 13:20:50,647: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 10.00 seconds... (5/100)
+
+[2022-08-10 13:21:10,666: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 12.00 seconds... (6/100)
+
+[2022-08-10 13:21:32,686: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 14.00 seconds... (7/100)
+
+[2022-08-10 13:21:56,711: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 16.00 seconds... (8/100)
+
+[2022-08-10 13:22:22,742: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 18.00 seconds... (9/100)
+
+[2022-08-10 13:22:50,771: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 20.00 seconds... (10/100)
+
+[2022-08-10 13:23:20,804: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 22.00 seconds... (11/100)
+
+[2022-08-10 13:23:52,840: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 24.00 seconds... (12/100)
+
+[2022-08-10 13:24:26,879: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 26.00 seconds... (13/100)
+
+[2022-08-10 13:25:02,919: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 28.00 seconds... (14/100)
+
+[2022-08-10 13:25:40,963: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 30.00 seconds... (15/100)
+
+[2022-08-10 13:26:21,011: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 32.00 seconds... (16/100)
+
+[2022-08-10 13:27:03,059: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 32.00 seconds... (16/100)
+
+[2022-08-10 13:27:45,107: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 32.00 seconds... (16/100)
+
+[2022-08-10 13:28:27,157: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 32.00 seconds... (16/100)
+
+[2022-08-10 13:29:09,201: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 32.00 seconds... (16/100)
+
+[2022-08-10 13:29:51,242: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 32.00 seconds... (16/100)
+
+[2022-08-10 13:30:33,291: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 32.00 seconds... (16/100)
+
+[2022-08-10 13:31:15,340: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 32.00 seconds... (16/100)
+
+[2022-08-10 13:31:57,386: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 32.00 seconds... (16/100)
+
+[2022-08-10 13:32:39,436: ERROR/MainProcess] consumer: Cannot connect to redis://redis:6379/0: Error -3 connecting to redis:6379. Temporary failure in name resolution..
+Trying again in 32.00 seconds... (16/100)
+
