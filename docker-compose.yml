@@ -37,9 +37,9 @@ services:
     depends_on:
       - python_server
       - redis
+    networks:
+      - my-network
      
-
-
   redis:
     container_name: redis
     image: redis:6-alpine
@@ -83,6 +83,8 @@ services:
       - REPMGR_PARTNER_NODES=pg-0,pg-1
       - REPMGR_NODE_NAME=pg-0
       - REPMGR_NODE_NETWORK_NAME=pg-0
+    networks:
+      - my-network
 
   pg-1:
     container_name: pgslave
@@ -101,6 +103,8 @@ services:
       - REPMGR_PARTNER_NODES=pg-0,pg-1
       - REPMGR_NODE_NAME=pg-1
       - REPMGR_NODE_NETWORK_NAME=pg-1
+    networks:
+      - my-network
 
   pgpool:
     container_name: pgpool
@@ -124,6 +128,8 @@ services:
     depends_on:
       - pg-0
       - pg-1
+    networks:
+      - my-network
 
   pgadmin:
     container_name: pgadmin
