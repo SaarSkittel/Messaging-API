@@ -102,14 +102,13 @@ def register(request):
     username=request.data["username"]
     email=request.data["email"]
     password=request.data["password"]
-
-    if  not username and not email and not password:
-        return Response(status=status.HTTP_400_BAD_REQUEST)
-    task = register_task.apply_async(args=(username, email, password))
-    print(task)
-    return Response(status=status.HTTP_200_OK)
-    #except:
-    #    return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+    try:
+        if  not username and not email and not password:
+            return Response(status=status.HTTP_400_BAD_REQUEST)
+        task = register_task.apply_async(args=(username, email, password))
+        return Response(status=status.HTTP_200_OK)
+    except:
+        return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 ### TO DO ###
 
