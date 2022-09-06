@@ -94,7 +94,7 @@ def write_message(request):
         return Response(status=status.HTTP_404_NOT_FOUND)
     except:
         return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
+"""
 #Async
 @api_view(["POST"])
 def register(request):
@@ -143,7 +143,7 @@ def authentication(request):
     except:
         return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-
+"""
 # Multithreaded
 @api_view(["POST"])
 def token(request):

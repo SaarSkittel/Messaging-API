@@ -34,9 +34,9 @@ def read_message_task(token,id):
 def write_message_task(token, id, data):
     write_message(token, id, data)
     return True
-
+"""
 @shared_task
 def register_task(username,email, password):
     register(username,email,password)
     return True
-
+"""

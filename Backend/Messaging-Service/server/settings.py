@@ -85,9 +85,7 @@ TEMPLATES = [
         },
     },
 ]
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:1337",
-]
+CORS_ALLOWED_ORIGINS = ["http://localhost:8000"]
 CORS_ALLOW_CREDENTIALS = True
 
 WSGI_APPLICATION = 'server.wsgi.application'
