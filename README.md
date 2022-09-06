@@ -3,7 +3,8 @@
 A fully scalable RESTful messaging api that runs on Docker written in Python using Django and Django Rest Framework with Celery for asynchronous tasking, Reddis message broker and Postgres for a DB. 
 The project is implementing microservices architecture and uses thechnologies like: JWT, replication streaming, middleware and monitoring.
 
-##Stack
+## Stack
+
 Docker, NGINX, Gunicorn, Django, Django rest Framework, Celery, Celery Flower, Redis, Postgres, PGPool, PGAdmin and DJDT.
 
 ## Technologies used
