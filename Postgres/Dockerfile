@@ -1,0 +1,1 @@
+FROM bitnami/postgresql-repmgr:14

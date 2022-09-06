@@ -9,7 +9,7 @@ from django.contrib.auth import authenticate
 from django.core.exceptions import PermissionDenied
 from rest_framework_simplejwt.exceptions import TokenError
 from celery.result import AsyncResult
-from .tasks import delete_message_task, get_all_messages_task, get_all_unread_messages_task,read_message_task,write_message_task,register_task, create_task
+from .tasks import delete_message_task, get_all_messages_task, get_all_unread_messages_task,read_message_task,write_message_task, create_task
 
 
 ### DONE ###

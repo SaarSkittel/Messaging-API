@@ -143,3 +143,877 @@
 [2022-09-06 08:37:24,810: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
 [2022-09-06 08:37:29,811: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
 [2022-09-06 08:37:34,810: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:04:19,165: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2022-09-06 15:04:19,166: DEBUG/MainProcess] | Worker: Building graph...
+[2022-09-06 15:04:19,167: DEBUG/MainProcess] | Worker: New boot order: {Timer, Hub, Pool, Autoscaler, StateDB, Beat, Consumer}
+[2022-09-06 15:04:19,171: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2022-09-06 15:04:19,171: DEBUG/MainProcess] | Consumer: Building graph...
+[2022-09-06 15:04:19,177: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Events, Mingle, Tasks, Control, Agent, Gossip, Heart, event loop}
+[2022-09-06 15:04:19,182: DEBUG/MainProcess] | Worker: Starting Hub
+[2022-09-06 15:04:19,183: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 15:04:19,184: DEBUG/MainProcess] | Worker: Starting Pool
+[2022-09-06 15:04:19,607: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 15:04:19,608: DEBUG/MainProcess] | Worker: Starting Consumer
+[2022-09-06 15:04:19,609: DEBUG/MainProcess] | Consumer: Starting Connection
+[2022-09-06 15:04:19,615: INFO/MainProcess] Connected to redis://redis:6379/0
+[2022-09-06 15:04:19,616: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 15:04:19,616: DEBUG/MainProcess] | Consumer: Starting Events
+[2022-09-06 15:04:19,619: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 15:04:19,619: DEBUG/MainProcess] | Consumer: Starting Mingle
+[2022-09-06 15:04:19,620: INFO/MainProcess] mingle: searching for neighbors
+[2022-09-06 15:04:20,627: INFO/MainProcess] mingle: all alone
+[2022-09-06 15:04:20,627: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 15:04:20,628: DEBUG/MainProcess] | Consumer: Starting Tasks
+[2022-09-06 15:04:20,633: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 15:04:20,633: DEBUG/MainProcess] | Consumer: Starting Control
+[2022-09-06 15:04:20,638: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 15:04:20,638: DEBUG/MainProcess] | Consumer: Starting Gossip
+[2022-09-06 15:04:20,642: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 15:04:20,643: DEBUG/MainProcess] | Consumer: Starting Heart
+[2022-09-06 15:04:20,645: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 15:04:20,646: DEBUG/MainProcess] | Consumer: Starting event loop
+[2022-09-06 15:04:20,647: DEBUG/MainProcess] | Worker: Hub.register Pool...
+[2022-09-06 15:04:20,648: WARNING/MainProcess] /usr/local/lib/python3.10/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+
+[2022-09-06 15:04:20,649: INFO/MainProcess] celery@91003c37132a ready.
+[2022-09-06 15:04:20,650: DEBUG/MainProcess] basic.qos: prefetch_count->32
+[2022-09-06 15:04:24,866: DEBUG/MainProcess] pidbox received method heartbeat() [reply_to:None ticket:None]
+[2022-09-06 15:04:24,867: DEBUG/MainProcess] Heartbeat requested by remote.
+[2022-09-06 15:04:24,875: DEBUG/MainProcess] pidbox received method active_queues() [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': '2d0d8b37-f572-3623-bffc-48a1a0fa0bf1'} ticket:3eb93cd3-bd8b-4b31-9e02-841d2d46f68a]
+[2022-09-06 15:04:24,880: DEBUG/MainProcess] pidbox received method scheduled() [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': '7c92cf0e-19a0-3f6e-9536-513484702042'} ticket:571e0928-35be-4759-ad7a-31465d333860]
+[2022-09-06 15:04:24,883: DEBUG/MainProcess] pidbox received method registered(taskinfoitems=[]) [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': '94073326-f1af-3ccd-bb6c-07d8b626beb3'} ticket:bb6f4ad7-49a0-44d0-84aa-f8c00985d7d7]
+[2022-09-06 15:04:24,885: DEBUG/MainProcess] pidbox received method stats() [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': '6479abba-e497-39d9-b55e-da1bf2b4567b'} ticket:f8012788-5eed-4d44-9ea3-dab261c5edb7]
+[2022-09-06 15:04:25,885: DEBUG/MainProcess] pidbox received method active() [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': '2d0d8b37-f572-3623-bffc-48a1a0fa0bf1'} ticket:14a5eedf-4ad0-4616-9489-968c10e4b1cb]
+[2022-09-06 15:04:25,890: DEBUG/MainProcess] pidbox received method reserved() [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': '7c92cf0e-19a0-3f6e-9536-513484702042'} ticket:e442b31b-72d8-4bbe-9860-27aeda503cc6]
+[2022-09-06 15:04:25,895: DEBUG/MainProcess] pidbox received method revoked() [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': '6479abba-e497-39d9-b55e-da1bf2b4567b'} ticket:7efca464-89fd-433f-9bc0-0b0da59dc4dc]
+[2022-09-06 15:04:25,897: DEBUG/MainProcess] pidbox received method conf(with_defaults=False) [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': '94073326-f1af-3ccd-bb6c-07d8b626beb3'} ticket:4c264435-4a6b-4dc9-bd79-9ad390fb0ce4]
+[2022-09-06 15:04:29,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:04:29,783: INFO/MainProcess] Events of group {task} enabled by remote.
+[2022-09-06 15:04:34,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:04:39,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:04:44,780: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:04:49,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:04:54,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:04:59,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:05:04,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:05:09,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:05:14,780: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:05:19,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:05:24,780: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:05:29,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:05:34,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:05:39,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:05:44,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:05:48,053: DEBUG/MainProcess] pidbox received method hello(from_node='celery@90e1d78c7029', revoked={}) [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': 'c800c3df-7761-3ca0-9939-46b0d49c3fb0'} ticket:91c35ae7-2153-4511-b8af-7ff1ee27927d]
+[2022-09-06 15:05:48,054: INFO/MainProcess] sync with celery@90e1d78c7029
+[2022-09-06 15:05:49,073: DEBUG/MainProcess] celery@90e1d78c7029 joined the party
+[2022-09-06 15:05:49,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:05:54,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:05:59,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:06:04,780: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:06:09,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:06:14,780: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:06:19,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:06:24,780: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:06:29,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:06:34,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:06:39,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:06:44,783: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:06:49,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:06:54,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:06:59,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:07:04,784: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:07:09,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:07:14,783: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:07:19,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:07:24,783: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:07:29,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:07:34,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:07:39,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:07:44,783: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:07:49,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:07:54,783: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:07:59,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:08:04,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:08:09,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:08:14,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:08:19,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:08:24,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:08:29,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:08:34,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:08:39,783: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:08:44,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:08:49,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:08:54,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:08:59,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:09:04,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:09:09,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:09:14,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:09:19,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:09:24,783: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:09:29,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:09:34,783: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:09:39,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:09:44,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:09:49,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:09:54,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:09:59,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:10:04,783: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:10:09,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:10:14,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:10:19,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:10:24,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:10:29,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:10:34,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:10:39,783: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:10:44,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:10:49,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:10:54,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:10:59,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:11:04,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:11:09,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:11:14,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:11:19,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:11:24,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:11:29,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:11:34,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:11:39,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:11:44,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:11:49,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:11:54,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:11:59,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:12:04,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:12:09,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:12:14,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:12:19,780: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:12:24,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:12:29,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:12:34,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:12:39,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:12:44,783: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:12:49,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:12:54,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:12:59,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:13:04,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:13:09,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:13:14,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:13:19,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:13:24,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:13:29,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:13:34,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:13:39,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:13:44,782: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:13:49,780: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:13:54,783: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:13:59,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:14:04,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:14:09,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:14:14,781: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 15:14:21,235: DEBUG/MainProcess] | Worker: Closing Hub...
+[2022-09-06 15:14:21,236: DEBUG/MainProcess] | Worker: Closing Pool...
+[2022-09-06 15:14:21,237: DEBUG/MainProcess] | Worker: Closing Consumer...
+[2022-09-06 15:14:21,237: DEBUG/MainProcess] | Worker: Stopping Consumer...
+[2022-09-06 15:14:21,238: DEBUG/MainProcess] | Consumer: Closing Connection...
+[2022-09-06 15:14:21,238: DEBUG/MainProcess] | Consumer: Closing Events...
+[2022-09-06 15:14:21,239: DEBUG/MainProcess] | Consumer: Closing Mingle...
+[2022-09-06 15:14:21,239: DEBUG/MainProcess] | Consumer: Closing Tasks...
+[2022-09-06 15:14:21,240: DEBUG/MainProcess] | Consumer: Closing Control...
+[2022-09-06 15:14:21,240: DEBUG/MainProcess] | Consumer: Closing Gossip...
+[2022-09-06 15:14:21,241: DEBUG/MainProcess] | Consumer: Closing Heart...
+[2022-09-06 15:14:21,241: DEBUG/MainProcess] | Consumer: Closing event loop...
+[2022-09-06 15:14:21,242: DEBUG/MainProcess] | Consumer: Stopping event loop...
+[2022-09-06 15:14:21,242: DEBUG/MainProcess] | Consumer: Stopping Heart...
+[2022-09-06 15:14:21,243: DEBUG/MainProcess] | Consumer: Stopping Gossip...
+[2022-09-06 15:14:21,246: DEBUG/MainProcess] | Consumer: Stopping Control...
+[2022-09-06 15:14:21,248: DEBUG/MainProcess] | Consumer: Stopping Tasks...
+[2022-09-06 15:14:21,248: DEBUG/MainProcess] Canceling task consumer...
+[2022-09-06 15:14:21,249: DEBUG/MainProcess] | Consumer: Stopping Mingle...
+[2022-09-06 15:14:21,249: DEBUG/MainProcess] | Consumer: Stopping Events...
+[2022-09-06 15:14:21,250: DEBUG/MainProcess] | Consumer: Stopping Connection...
+[2022-09-06 15:14:21,250: DEBUG/MainProcess] | Worker: Stopping Pool...
+[2022-09-06 15:14:22,261: DEBUG/MainProcess] | Worker: Stopping Hub...
+[2022-09-06 15:14:22,261: DEBUG/MainProcess] | Consumer: Shutdown Heart...
+[2022-09-06 15:14:22,262: DEBUG/MainProcess] | Consumer: Shutdown Gossip...
+[2022-09-06 15:14:22,262: DEBUG/MainProcess] | Consumer: Shutdown Control...
+[2022-09-06 15:14:22,263: DEBUG/MainProcess] | Consumer: Shutdown Tasks...
+[2022-09-06 15:14:22,263: DEBUG/MainProcess] Canceling task consumer...
+[2022-09-06 15:14:22,264: DEBUG/MainProcess] Closing consumer channel...
+[2022-09-06 15:14:22,264: DEBUG/MainProcess] | Consumer: Shutdown Events...
+[2022-09-06 15:14:22,265: DEBUG/MainProcess] | Consumer: Shutdown Connection...
+[2022-09-06 15:14:22,266: DEBUG/MainProcess] removing tasks from inqueue until task handler finished
+[2022-09-06 18:21:30,531: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2022-09-06 18:21:30,533: DEBUG/MainProcess] | Worker: Building graph...
+[2022-09-06 18:21:30,534: DEBUG/MainProcess] | Worker: New boot order: {Timer, Hub, Pool, Autoscaler, Beat, StateDB, Consumer}
+[2022-09-06 18:21:30,538: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2022-09-06 18:21:30,538: DEBUG/MainProcess] | Consumer: Building graph...
+[2022-09-06 18:21:30,550: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Events, Heart, Mingle, Gossip, Tasks, Control, Agent, event loop}
+[2022-09-06 18:21:30,559: DEBUG/MainProcess] | Worker: Starting Hub
+[2022-09-06 18:21:30,560: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 18:21:30,561: DEBUG/MainProcess] | Worker: Starting Pool
+[2022-09-06 18:21:31,159: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 18:21:31,160: DEBUG/MainProcess] | Worker: Starting Consumer
+[2022-09-06 18:21:31,160: DEBUG/MainProcess] | Consumer: Starting Connection
+[2022-09-06 18:21:31,166: INFO/MainProcess] Connected to redis://redis:6379/0
+[2022-09-06 18:21:31,166: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 18:21:31,167: DEBUG/MainProcess] | Consumer: Starting Events
+[2022-09-06 18:21:31,169: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 18:21:31,170: DEBUG/MainProcess] | Consumer: Starting Heart
+[2022-09-06 18:21:31,172: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 18:21:31,172: DEBUG/MainProcess] | Consumer: Starting Mingle
+[2022-09-06 18:21:31,173: INFO/MainProcess] mingle: searching for neighbors
+[2022-09-06 18:21:32,180: INFO/MainProcess] mingle: all alone
+[2022-09-06 18:21:32,180: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 18:21:32,181: DEBUG/MainProcess] | Consumer: Starting Gossip
+[2022-09-06 18:21:32,184: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 18:21:32,185: DEBUG/MainProcess] | Consumer: Starting Tasks
+[2022-09-06 18:21:32,188: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 18:21:32,189: DEBUG/MainProcess] | Consumer: Starting Control
+[2022-09-06 18:21:32,192: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 18:21:32,193: DEBUG/MainProcess] | Consumer: Starting event loop
+[2022-09-06 18:21:32,193: DEBUG/MainProcess] | Worker: Hub.register Pool...
+[2022-09-06 18:21:32,194: WARNING/MainProcess] /usr/local/lib/python3.10/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+
+[2022-09-06 18:21:32,195: INFO/MainProcess] celery@d28b7044c27c ready.
+[2022-09-06 18:21:32,195: DEBUG/MainProcess] basic.qos: prefetch_count->32
+[2022-09-06 18:21:32,260: DEBUG/MainProcess] pidbox received method hello(from_node='celery@7545dbf4299a', revoked={}) [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': 'ecda5601-843c-3185-ab61-d62340949e2a'} ticket:1b209858-543c-4f86-ad1f-94f2a22f91bf]
+[2022-09-06 18:21:32,261: INFO/MainProcess] sync with celery@7545dbf4299a
+[2022-09-06 18:21:33,278: DEBUG/MainProcess] celery@7545dbf4299a joined the party
+[2022-09-06 18:21:38,596: DEBUG/MainProcess] pidbox received method active_queues() [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': 'de3edf35-6dc6-3cc2-a8b6-59871c28d50f'} ticket:22b1622a-f0a3-4c8b-8ad7-f6ef29b2e565]
+[2022-09-06 18:21:38,601: DEBUG/MainProcess] pidbox received method heartbeat() [reply_to:None ticket:None]
+[2022-09-06 18:21:38,602: DEBUG/MainProcess] Heartbeat requested by remote.
+[2022-09-06 18:21:38,604: DEBUG/MainProcess] pidbox received method registered(taskinfoitems=[]) [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': '7e02024a-0d34-3c3d-aea3-c982eb326c36'} ticket:b7dcd1d9-5307-4e69-8f2d-9468d27abb29]
+[2022-09-06 18:21:38,608: DEBUG/MainProcess] pidbox received method stats() [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': 'ae637c1f-ad00-3bbe-a5a3-f750104c9c22'} ticket:52e1873c-f5b6-4c95-a34f-8c9e850e0207]
+[2022-09-06 18:21:38,611: DEBUG/MainProcess] pidbox received method scheduled() [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': 'd851e7e7-fbdf-3850-a14d-2e3a9e82d732'} ticket:0f124707-4b32-43d2-9986-5c67295a9b05]
+[2022-09-06 18:21:39,608: DEBUG/MainProcess] pidbox received method active() [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': 'de3edf35-6dc6-3cc2-a8b6-59871c28d50f'} ticket:73e6a5bf-3f9b-448b-9fb2-1681c7369d13]
+[2022-09-06 18:21:39,614: DEBUG/MainProcess] pidbox received method reserved() [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': '7e02024a-0d34-3c3d-aea3-c982eb326c36'} ticket:54e09976-40ba-4b87-b35f-7f490df23e9b]
+[2022-09-06 18:21:39,619: DEBUG/MainProcess] pidbox received method revoked() [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': 'ae637c1f-ad00-3bbe-a5a3-f750104c9c22'} ticket:62c82aa3-7a71-4c4d-babd-09b1a9d68647]
+[2022-09-06 18:21:39,621: DEBUG/MainProcess] pidbox received method conf(with_defaults=False) [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': 'd851e7e7-fbdf-3850-a14d-2e3a9e82d732'} ticket:fe3a987b-54d1-415c-933c-1fa136625366]
+[2022-09-06 18:21:43,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:21:43,393: INFO/MainProcess] Events of group {task} enabled by remote.
+[2022-09-06 18:21:48,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:21:53,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:21:58,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:22:03,392: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:22:08,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:22:13,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:22:18,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:22:23,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:22:28,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:22:33,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:22:38,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:22:43,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:22:48,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:22:53,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:22:58,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:23:03,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:23:08,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:23:13,392: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:23:18,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:23:23,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:23:28,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:23:33,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:23:38,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:23:43,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:23:48,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:23:53,392: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:23:58,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:24:03,392: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:24:08,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:24:13,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:24:18,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:24:23,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:24:28,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:24:33,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:24:38,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:24:43,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:24:48,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:24:53,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:24:58,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:25:03,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:25:08,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:25:13,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:25:18,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:25:23,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:25:28,396: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:25:33,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:25:38,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:25:43,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:25:48,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:25:53,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:25:58,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:26:03,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:26:08,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:26:13,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:26:18,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:26:23,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:26:28,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:26:33,396: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:26:38,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:26:43,396: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:26:48,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:26:53,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:26:58,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:27:03,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:27:08,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:27:13,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:27:18,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:27:23,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:27:28,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:27:33,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:27:38,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:27:43,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:27:48,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:27:53,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:27:58,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:28:03,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:28:08,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:28:13,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:28:18,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:28:23,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:28:28,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:28:33,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:28:38,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:28:43,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:28:48,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:28:53,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:28:58,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:29:03,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:29:08,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:29:13,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:29:18,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:29:23,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:29:28,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:29:33,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:29:38,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:29:43,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:29:48,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:29:53,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:29:58,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:30:03,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:30:08,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:30:13,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:30:18,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:30:23,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:30:28,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:30:33,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:30:38,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:30:43,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:30:48,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:30:53,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:30:58,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:31:03,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:31:08,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:31:13,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:31:18,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:31:23,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:31:28,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:31:33,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:31:38,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:31:43,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:31:48,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:31:53,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:31:58,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:32:03,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:32:08,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:32:13,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:32:18,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:32:23,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:32:28,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:32:33,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:32:38,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:32:43,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:32:48,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:32:53,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:32:58,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:33:03,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:33:08,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:33:13,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:33:18,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:33:23,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:33:28,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:33:33,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:33:38,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:33:43,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:33:48,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:33:53,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:33:58,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:34:03,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:34:08,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:34:13,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:34:18,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:34:23,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:34:28,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:34:33,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:34:38,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:34:43,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:34:48,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:34:53,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:34:58,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:35:03,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:35:08,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:35:13,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:35:18,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:35:23,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:35:28,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:35:33,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:35:38,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:35:43,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:35:48,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:35:53,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:35:58,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:36:03,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:36:08,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:36:13,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:36:18,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:36:23,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:36:28,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:36:33,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:36:38,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:36:43,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:36:48,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:36:53,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:36:58,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:37:03,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:37:08,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:37:13,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:37:18,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:37:23,395: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:37:28,393: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:37:33,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:37:38,394: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:37:44,786: DEBUG/MainProcess] | Worker: Closing Hub...
+[2022-09-06 18:37:44,786: DEBUG/MainProcess] | Worker: Closing Pool...
+[2022-09-06 18:37:44,787: DEBUG/MainProcess] | Worker: Closing Consumer...
+[2022-09-06 18:37:44,788: DEBUG/MainProcess] | Worker: Stopping Consumer...
+[2022-09-06 18:37:44,788: DEBUG/MainProcess] | Consumer: Closing Connection...
+[2022-09-06 18:37:44,789: DEBUG/MainProcess] | Consumer: Closing Events...
+[2022-09-06 18:37:44,789: DEBUG/MainProcess] | Consumer: Closing Heart...
+[2022-09-06 18:37:44,789: DEBUG/MainProcess] | Consumer: Closing Mingle...
+[2022-09-06 18:37:44,790: DEBUG/MainProcess] | Consumer: Closing Gossip...
+[2022-09-06 18:37:44,790: DEBUG/MainProcess] | Consumer: Closing Tasks...
+[2022-09-06 18:37:44,791: DEBUG/MainProcess] | Consumer: Closing Control...
+[2022-09-06 18:37:44,791: DEBUG/MainProcess] | Consumer: Closing event loop...
+[2022-09-06 18:37:44,791: DEBUG/MainProcess] | Consumer: Stopping event loop...
+[2022-09-06 18:37:44,792: DEBUG/MainProcess] | Consumer: Stopping Control...
+[2022-09-06 18:37:44,794: DEBUG/MainProcess] | Consumer: Stopping Tasks...
+[2022-09-06 18:37:44,794: DEBUG/MainProcess] Canceling task consumer...
+[2022-09-06 18:37:44,795: DEBUG/MainProcess] | Consumer: Stopping Gossip...
+[2022-09-06 18:37:44,796: DEBUG/MainProcess] | Consumer: Stopping Mingle...
+[2022-09-06 18:37:44,797: DEBUG/MainProcess] | Consumer: Stopping Heart...
+[2022-09-06 18:37:44,798: DEBUG/MainProcess] | Consumer: Stopping Events...
+[2022-09-06 18:37:44,798: DEBUG/MainProcess] | Consumer: Stopping Connection...
+[2022-09-06 18:37:44,799: DEBUG/MainProcess] | Worker: Stopping Pool...
+[2022-09-06 18:37:45,811: DEBUG/MainProcess] | Worker: Stopping Hub...
+[2022-09-06 18:37:45,811: DEBUG/MainProcess] | Consumer: Shutdown Control...
+[2022-09-06 18:37:45,812: DEBUG/MainProcess] | Consumer: Shutdown Tasks...
+[2022-09-06 18:37:45,812: DEBUG/MainProcess] Canceling task consumer...
+[2022-09-06 18:37:45,813: DEBUG/MainProcess] Closing consumer channel...
+[2022-09-06 18:37:45,814: DEBUG/MainProcess] | Consumer: Shutdown Gossip...
+[2022-09-06 18:37:45,814: DEBUG/MainProcess] | Consumer: Shutdown Heart...
+[2022-09-06 18:37:45,815: DEBUG/MainProcess] | Consumer: Shutdown Events...
+[2022-09-06 18:37:45,815: DEBUG/MainProcess] | Consumer: Shutdown Connection...
+[2022-09-06 18:37:45,816: DEBUG/MainProcess] removing tasks from inqueue until task handler finished
+[2022-09-06 18:38:57,057: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2022-09-06 18:38:57,059: DEBUG/MainProcess] | Worker: Building graph...
+[2022-09-06 18:38:57,059: DEBUG/MainProcess] | Worker: New boot order: {StateDB, Beat, Timer, Hub, Pool, Autoscaler, Consumer}
+[2022-09-06 18:38:57,063: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2022-09-06 18:38:57,063: DEBUG/MainProcess] | Consumer: Building graph...
+[2022-09-06 18:38:57,069: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Events, Mingle, Tasks, Control, Gossip, Heart, Agent, event loop}
+[2022-09-06 18:38:57,074: DEBUG/MainProcess] | Worker: Starting Hub
+[2022-09-06 18:38:57,075: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 18:38:57,075: DEBUG/MainProcess] | Worker: Starting Pool
+[2022-09-06 18:38:57,474: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 18:38:57,475: DEBUG/MainProcess] | Worker: Starting Consumer
+[2022-09-06 18:38:57,476: DEBUG/MainProcess] | Consumer: Starting Connection
+[2022-09-06 18:38:57,636: INFO/MainProcess] Connected to redis://redis:6379/0
+[2022-09-06 18:38:57,637: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 18:38:57,638: DEBUG/MainProcess] | Consumer: Starting Events
+[2022-09-06 18:38:57,640: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 18:38:57,640: DEBUG/MainProcess] | Consumer: Starting Mingle
+[2022-09-06 18:38:57,641: INFO/MainProcess] mingle: searching for neighbors
+[2022-09-06 18:38:58,649: INFO/MainProcess] mingle: all alone
+[2022-09-06 18:38:58,764: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 18:38:58,765: DEBUG/MainProcess] | Consumer: Starting Tasks
+[2022-09-06 18:38:58,768: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 18:38:58,769: DEBUG/MainProcess] | Consumer: Starting Control
+[2022-09-06 18:38:58,773: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 18:38:58,773: DEBUG/MainProcess] | Consumer: Starting Gossip
+[2022-09-06 18:38:58,777: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 18:38:58,778: DEBUG/MainProcess] | Consumer: Starting Heart
+[2022-09-06 18:38:58,780: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 18:38:58,781: DEBUG/MainProcess] | Consumer: Starting event loop
+[2022-09-06 18:38:58,782: DEBUG/MainProcess] | Worker: Hub.register Pool...
+[2022-09-06 18:38:58,783: WARNING/MainProcess] /usr/local/lib/python3.10/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+
+[2022-09-06 18:38:58,784: INFO/MainProcess] celery@22b5ddd12586 ready.
+[2022-09-06 18:38:58,784: DEBUG/MainProcess] basic.qos: prefetch_count->32
+[2022-09-06 18:39:01,128: DEBUG/MainProcess] pidbox received method hello(from_node='celery@0992a9938950', revoked={}) [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': '211ecd1b-5715-36c4-8b34-2f25950f120d'} ticket:48460470-1eb4-4369-b742-840954e0aa9d]
+[2022-09-06 18:39:01,128: INFO/MainProcess] sync with celery@0992a9938950
+[2022-09-06 18:39:02,144: DEBUG/MainProcess] celery@0992a9938950 joined the party
+[2022-09-06 18:39:07,577: DEBUG/MainProcess] pidbox received method heartbeat() [reply_to:None ticket:None]
+[2022-09-06 18:39:07,578: DEBUG/MainProcess] Heartbeat requested by remote.
+[2022-09-06 18:39:07,593: DEBUG/MainProcess] pidbox received method stats() [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': '3ea71d01-2d02-3f66-809c-5422b7cb9c42'} ticket:88ce0400-09f2-43c3-b777-92b371640ebe]
+[2022-09-06 18:39:07,603: DEBUG/MainProcess] pidbox received method registered(taskinfoitems=[]) [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': '496fdd5f-f59d-3c50-9d97-3e1bc1c34946'} ticket:b038b4f9-9810-497d-b2cd-45279b8681ab]
+[2022-09-06 18:39:07,605: DEBUG/MainProcess] pidbox received method active_queues() [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': '1f437b4e-79db-3ccf-899e-5e780e7a348e'} ticket:fce4c726-4184-40dd-82d1-7ff66e502e21]
+[2022-09-06 18:39:07,607: DEBUG/MainProcess] pidbox received method scheduled() [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': 'bd9f4ae3-028f-39b6-9ee4-2c2b7c4169c5'} ticket:20e45ad0-60bc-4878-9193-08ef8573b7ef]
+[2022-09-06 18:39:08,606: DEBUG/MainProcess] pidbox received method active() [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': '3ea71d01-2d02-3f66-809c-5422b7cb9c42'} ticket:5c81752b-f5e9-4bbd-8895-c85433a8fff3]
+[2022-09-06 18:39:08,610: DEBUG/MainProcess] pidbox received method reserved() [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': '496fdd5f-f59d-3c50-9d97-3e1bc1c34946'} ticket:7d0db890-1dfc-49d4-b1fc-41f40d39c3cc]
+[2022-09-06 18:39:08,615: DEBUG/MainProcess] pidbox received method revoked() [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': 'bd9f4ae3-028f-39b6-9ee4-2c2b7c4169c5'} ticket:2fe9d210-7819-4dc3-96db-6485ab50b496]
+[2022-09-06 18:39:08,617: DEBUG/MainProcess] pidbox received method conf(with_defaults=False) [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': '1f437b4e-79db-3ccf-899e-5e780e7a348e'} ticket:566f6468-c643-4a90-b39d-11245d169fa9]
+[2022-09-06 18:39:12,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:39:12,533: INFO/MainProcess] Events of group {task} enabled by remote.
+[2022-09-06 18:39:17,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:39:22,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:39:27,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:39:32,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:39:37,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:39:42,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:39:47,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:39:52,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:39:57,534: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:40:02,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:40:07,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:40:12,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:40:17,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:40:22,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:40:27,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:40:32,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:40:37,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:40:42,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:40:47,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:40:52,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:40:57,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:41:02,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:41:07,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:41:12,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:41:17,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:41:22,531: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:41:27,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:41:32,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:41:37,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:41:42,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:41:47,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:41:52,534: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:41:57,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:42:02,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:42:07,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:42:12,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:42:17,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:42:22,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:42:27,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:42:32,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:42:37,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:42:42,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:42:47,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:42:52,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:42:57,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:43:02,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:43:07,534: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:43:12,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:43:17,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:43:22,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:43:27,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:43:32,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:43:37,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:43:42,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:43:47,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:43:52,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:43:57,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:44:02,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:44:07,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:44:12,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:44:17,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:44:22,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:44:27,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:44:32,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:44:37,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:44:42,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:44:47,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:44:52,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:44:57,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:45:02,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:45:07,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:45:12,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:45:17,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:45:22,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:45:27,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:45:32,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:45:37,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:45:42,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:45:47,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:45:52,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:45:57,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:46:02,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:46:07,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:46:12,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:46:17,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:46:22,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:46:27,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:46:32,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:46:37,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:46:42,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:46:47,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:46:52,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:46:57,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:47:02,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:47:07,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:47:12,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:47:17,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:47:22,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:47:27,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:47:32,534: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:47:37,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:47:42,534: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:47:47,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:47:52,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:47:57,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:48:02,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:48:07,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:48:12,534: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:48:17,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:48:22,534: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:48:27,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:48:32,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:48:37,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:48:42,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:48:47,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:48:52,533: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:48:57,532: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:48:59,328: DEBUG/MainProcess] | Worker: Closing Hub...
+[2022-09-06 18:48:59,346: DEBUG/MainProcess] | Worker: Closing Pool...
+[2022-09-06 18:48:59,347: DEBUG/MainProcess] | Worker: Closing Consumer...
+[2022-09-06 18:48:59,348: DEBUG/MainProcess] | Worker: Stopping Consumer...
+[2022-09-06 18:48:59,349: DEBUG/MainProcess] | Consumer: Closing Connection...
+[2022-09-06 18:48:59,350: DEBUG/MainProcess] | Consumer: Closing Events...
+[2022-09-06 18:48:59,351: DEBUG/MainProcess] | Consumer: Closing Mingle...
+[2022-09-06 18:48:59,351: DEBUG/MainProcess] | Consumer: Closing Tasks...
+[2022-09-06 18:48:59,352: DEBUG/MainProcess] | Consumer: Closing Control...
+[2022-09-06 18:48:59,352: DEBUG/MainProcess] | Consumer: Closing Gossip...
+[2022-09-06 18:48:59,353: DEBUG/MainProcess] | Consumer: Closing Heart...
+[2022-09-06 18:48:59,353: DEBUG/MainProcess] | Consumer: Closing event loop...
+[2022-09-06 18:48:59,354: DEBUG/MainProcess] | Consumer: Stopping event loop...
+[2022-09-06 18:48:59,359: DEBUG/MainProcess] | Consumer: Stopping Heart...
+[2022-09-06 18:48:59,652: DEBUG/MainProcess] | Consumer: Stopping Gossip...
+[2022-09-06 18:48:59,654: DEBUG/MainProcess] | Consumer: Stopping Control...
+[2022-09-06 18:48:59,654: DEBUG/MainProcess] | Consumer: Stopping Tasks...
+[2022-09-06 18:48:59,655: DEBUG/MainProcess] Canceling task consumer...
+[2022-09-06 18:48:59,656: DEBUG/MainProcess] | Consumer: Stopping Mingle...
+[2022-09-06 18:48:59,656: DEBUG/MainProcess] | Consumer: Stopping Events...
+[2022-09-06 18:48:59,657: DEBUG/MainProcess] | Consumer: Stopping Connection...
+[2022-09-06 18:48:59,657: DEBUG/MainProcess] | Worker: Stopping Pool...
+[2022-09-06 18:49:00,324: DEBUG/MainProcess] | Worker: Stopping Hub...
+[2022-09-06 18:49:00,325: DEBUG/MainProcess] | Consumer: Shutdown Heart...
+[2022-09-06 18:49:00,326: DEBUG/MainProcess] | Consumer: Shutdown Gossip...
+[2022-09-06 18:49:00,326: DEBUG/MainProcess] | Consumer: Shutdown Control...
+[2022-09-06 18:49:00,327: DEBUG/MainProcess] | Consumer: Shutdown Tasks...
+[2022-09-06 18:49:00,328: DEBUG/MainProcess] Canceling task consumer...
+[2022-09-06 18:49:00,328: DEBUG/MainProcess] Closing consumer channel...
+[2022-09-06 18:49:00,329: DEBUG/MainProcess] | Consumer: Shutdown Events...
+[2022-09-06 18:49:00,330: DEBUG/MainProcess] | Consumer: Shutdown Connection...
+[2022-09-06 18:49:00,331: DEBUG/MainProcess] removing tasks from inqueue until task handler finished
+[2022-09-06 18:54:33,503: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2022-09-06 18:54:33,671: DEBUG/MainProcess] | Worker: Building graph...
+[2022-09-06 18:54:33,671: DEBUG/MainProcess] | Worker: New boot order: {Beat, StateDB, Timer, Hub, Pool, Autoscaler, Consumer}
+[2022-09-06 18:54:34,025: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2022-09-06 18:54:34,026: DEBUG/MainProcess] | Consumer: Building graph...
+[2022-09-06 18:54:34,202: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Events, Heart, Agent, Mingle, Gossip, Tasks, Control, event loop}
+[2022-09-06 18:54:34,541: DEBUG/MainProcess] | Worker: Starting Hub
+[2022-09-06 18:54:34,541: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 18:54:34,542: DEBUG/MainProcess] | Worker: Starting Pool
+[2022-09-06 18:54:35,230: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 18:54:35,231: DEBUG/MainProcess] | Worker: Starting Consumer
+[2022-09-06 18:54:35,232: DEBUG/MainProcess] | Consumer: Starting Connection
+[2022-09-06 18:54:35,270: INFO/MainProcess] Connected to redis://redis:6379/0
+[2022-09-06 18:54:35,270: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 18:54:35,271: DEBUG/MainProcess] | Consumer: Starting Events
+[2022-09-06 18:54:35,274: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 18:54:35,274: DEBUG/MainProcess] | Consumer: Starting Heart
+[2022-09-06 18:54:35,276: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 18:54:35,277: DEBUG/MainProcess] | Consumer: Starting Mingle
+[2022-09-06 18:54:35,278: INFO/MainProcess] mingle: searching for neighbors
+[2022-09-06 18:54:36,286: INFO/MainProcess] mingle: all alone
+[2022-09-06 18:54:36,287: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 18:54:36,287: DEBUG/MainProcess] | Consumer: Starting Gossip
+[2022-09-06 18:54:36,290: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 18:54:36,291: DEBUG/MainProcess] | Consumer: Starting Tasks
+[2022-09-06 18:54:36,351: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 18:54:36,352: DEBUG/MainProcess] | Consumer: Starting Control
+[2022-09-06 18:54:36,355: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 18:54:36,355: DEBUG/MainProcess] | Consumer: Starting event loop
+[2022-09-06 18:54:36,356: DEBUG/MainProcess] | Worker: Hub.register Pool...
+[2022-09-06 18:54:36,510: WARNING/MainProcess] /usr/local/lib/python3.10/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+
+[2022-09-06 18:54:36,511: INFO/MainProcess] celery@78fddf0fd861 ready.
+[2022-09-06 18:54:36,511: DEBUG/MainProcess] basic.qos: prefetch_count->32
+[2022-09-06 18:54:38,360: DEBUG/MainProcess] celery@5f16d0499b2a joined the party
+[2022-09-06 18:54:38,791: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:54:38,792: INFO/MainProcess] Events of group {task} enabled by remote.
+[2022-09-06 18:54:43,792: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:54:48,791: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:54:53,792: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:54:58,793: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:55:03,792: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:55:08,791: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:55:13,793: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:55:18,792: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:55:23,791: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:55:28,792: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:55:33,792: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:55:38,791: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:55:43,792: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:55:48,791: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:55:53,791: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:55:58,792: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:56:03,792: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:56:08,792: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:56:13,792: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:56:18,792: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:56:23,791: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:56:28,791: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:56:33,793: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:56:38,791: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:56:43,791: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:56:48,791: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:56:53,792: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:56:58,791: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:57:03,792: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:57:08,792: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:57:13,792: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:57:18,791: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:57:23,792: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:57:28,793: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:57:33,791: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:57:38,791: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:57:43,791: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:57:48,791: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:57:53,791: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:57:58,792: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:58:03,791: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:58:08,792: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:58:13,791: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:58:18,792: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 18:58:24,486: DEBUG/MainProcess] | Worker: Closing Hub...
+[2022-09-06 18:58:24,487: DEBUG/MainProcess] | Worker: Closing Pool...
+[2022-09-06 18:58:24,488: DEBUG/MainProcess] | Worker: Closing Consumer...
+[2022-09-06 18:58:24,489: DEBUG/MainProcess] | Worker: Stopping Consumer...
+[2022-09-06 18:58:24,490: DEBUG/MainProcess] | Consumer: Closing Connection...
+[2022-09-06 18:58:24,491: DEBUG/MainProcess] | Consumer: Closing Events...
+[2022-09-06 18:58:24,491: DEBUG/MainProcess] | Consumer: Closing Heart...
+[2022-09-06 18:58:24,492: DEBUG/MainProcess] | Consumer: Closing Mingle...
+[2022-09-06 18:58:24,493: DEBUG/MainProcess] | Consumer: Closing Gossip...
+[2022-09-06 18:58:24,493: DEBUG/MainProcess] | Consumer: Closing Tasks...
+[2022-09-06 18:58:24,494: DEBUG/MainProcess] | Consumer: Closing Control...
+[2022-09-06 18:58:24,494: DEBUG/MainProcess] | Consumer: Closing event loop...
+[2022-09-06 18:58:24,495: DEBUG/MainProcess] | Consumer: Stopping event loop...
+[2022-09-06 18:58:24,496: DEBUG/MainProcess] | Consumer: Stopping Control...
+[2022-09-06 18:58:24,498: DEBUG/MainProcess] | Consumer: Stopping Tasks...
+[2022-09-06 18:58:24,498: DEBUG/MainProcess] Canceling task consumer...
+[2022-09-06 18:58:24,499: DEBUG/MainProcess] | Consumer: Stopping Gossip...
+[2022-09-06 18:58:24,501: DEBUG/MainProcess] | Consumer: Stopping Mingle...
+[2022-09-06 18:58:24,502: DEBUG/MainProcess] | Consumer: Stopping Heart...
+[2022-09-06 18:58:24,503: DEBUG/MainProcess] | Consumer: Stopping Events...
+[2022-09-06 18:58:24,504: DEBUG/MainProcess] | Consumer: Stopping Connection...
+[2022-09-06 18:58:24,505: DEBUG/MainProcess] | Worker: Stopping Pool...
+[2022-09-06 18:58:25,518: DEBUG/MainProcess] | Worker: Stopping Hub...
+[2022-09-06 18:58:25,519: DEBUG/MainProcess] | Consumer: Shutdown Control...
+[2022-09-06 18:58:25,519: DEBUG/MainProcess] | Consumer: Shutdown Tasks...
+[2022-09-06 18:58:25,520: DEBUG/MainProcess] Canceling task consumer...
+[2022-09-06 18:58:25,520: DEBUG/MainProcess] Closing consumer channel...
+[2022-09-06 18:58:25,521: DEBUG/MainProcess] | Consumer: Shutdown Gossip...
+[2022-09-06 18:58:25,521: DEBUG/MainProcess] | Consumer: Shutdown Heart...
+[2022-09-06 18:58:25,522: DEBUG/MainProcess] | Consumer: Shutdown Events...
+[2022-09-06 18:58:25,522: DEBUG/MainProcess] | Consumer: Shutdown Connection...
+[2022-09-06 18:58:25,523: DEBUG/MainProcess] removing tasks from inqueue until task handler finished
+[2022-09-06 19:24:31,256: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2022-09-06 19:24:31,258: DEBUG/MainProcess] | Worker: Building graph...
+[2022-09-06 19:24:31,259: DEBUG/MainProcess] | Worker: New boot order: {Beat, StateDB, Timer, Hub, Pool, Autoscaler, Consumer}
+[2022-09-06 19:24:31,265: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2022-09-06 19:24:31,266: DEBUG/MainProcess] | Consumer: Building graph...
+[2022-09-06 19:24:31,272: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Events, Mingle, Gossip, Agent, Tasks, Control, Heart, event loop}
+[2022-09-06 19:24:31,281: DEBUG/MainProcess] | Worker: Starting Hub
+[2022-09-06 19:24:31,282: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 19:24:31,282: DEBUG/MainProcess] | Worker: Starting Pool
+[2022-09-06 19:24:31,978: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 19:24:31,987: DEBUG/MainProcess] | Worker: Starting Consumer
+[2022-09-06 19:24:31,987: DEBUG/MainProcess] | Consumer: Starting Connection
+[2022-09-06 19:24:32,060: INFO/MainProcess] Connected to redis://redis:6379/0
+[2022-09-06 19:24:32,061: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 19:24:32,062: DEBUG/MainProcess] | Consumer: Starting Events
+[2022-09-06 19:24:32,068: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 19:24:32,069: DEBUG/MainProcess] | Consumer: Starting Mingle
+[2022-09-06 19:24:32,070: INFO/MainProcess] mingle: searching for neighbors
+[2022-09-06 19:24:33,090: INFO/MainProcess] mingle: all alone
+[2022-09-06 19:24:33,090: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 19:24:33,091: DEBUG/MainProcess] | Consumer: Starting Gossip
+[2022-09-06 19:24:33,095: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 19:24:33,096: DEBUG/MainProcess] | Consumer: Starting Tasks
+[2022-09-06 19:24:33,099: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 19:24:33,100: DEBUG/MainProcess] | Consumer: Starting Control
+[2022-09-06 19:24:33,104: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 19:24:33,104: DEBUG/MainProcess] | Consumer: Starting Heart
+[2022-09-06 19:24:33,107: DEBUG/MainProcess] ^-- substep ok
+[2022-09-06 19:24:33,108: DEBUG/MainProcess] | Consumer: Starting event loop
+[2022-09-06 19:24:33,109: DEBUG/MainProcess] | Worker: Hub.register Pool...
+[2022-09-06 19:24:33,110: WARNING/MainProcess] /usr/local/lib/python3.10/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+
+[2022-09-06 19:24:33,111: INFO/MainProcess] celery@a871d80971e9 ready.
+[2022-09-06 19:24:33,112: DEBUG/MainProcess] basic.qos: prefetch_count->32
+[2022-09-06 19:24:33,132: DEBUG/MainProcess] pidbox received method heartbeat() [reply_to:None ticket:None]
+[2022-09-06 19:24:33,133: DEBUG/MainProcess] Heartbeat requested by remote.
+[2022-09-06 19:24:33,136: DEBUG/MainProcess] pidbox received method active_queues() [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': 'cea3e798-6952-3229-b61f-a253e73b6aff'} ticket:20a9ed0d-2b1e-4394-8c1b-d66bf1aa4601]
+[2022-09-06 19:24:33,150: DEBUG/MainProcess] pidbox received method registered(taskinfoitems=[]) [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': 'da36a4db-f91d-3f3d-820e-8b5c94a4ed9a'} ticket:ccb38f66-9cf4-482c-869b-dac4d31fff95]
+[2022-09-06 19:24:33,152: DEBUG/MainProcess] pidbox received method stats() [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': '29a06426-67c9-3344-b567-b9187fa39ccf'} ticket:d7b6a76f-79d5-47bb-8e2f-9f74acdc531e]
+[2022-09-06 19:24:33,155: DEBUG/MainProcess] pidbox received method scheduled() [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': 'aa8c991a-318c-3404-a1b2-2d3d60141f2a'} ticket:d2126255-950a-4856-b93a-0eff0382adea]
+[2022-09-06 19:24:33,300: DEBUG/MainProcess] pidbox received method hello(from_node='celery@67dd6dcf6a7c', revoked={}) [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': '501b26f4-ce29-3db8-a725-fb0200b3e135'} ticket:216da5f0-c095-4f6d-bafd-2924894a5876]
+[2022-09-06 19:24:33,301: INFO/MainProcess] sync with celery@67dd6dcf6a7c
+[2022-09-06 19:24:34,156: DEBUG/MainProcess] pidbox received method active() [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': 'cea3e798-6952-3229-b61f-a253e73b6aff'} ticket:4bb21b6a-e83c-4cc2-ab02-dbb75a067f02]
+[2022-09-06 19:24:34,158: DEBUG/MainProcess] pidbox received method reserved() [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': 'da36a4db-f91d-3f3d-820e-8b5c94a4ed9a'} ticket:bc99a8bf-0f9b-494d-b5d4-dcc1905ab85d]
+[2022-09-06 19:24:34,163: DEBUG/MainProcess] pidbox received method revoked() [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': '29a06426-67c9-3344-b567-b9187fa39ccf'} ticket:cc47bd94-2f0d-4ee5-81b1-5e6eb109022d]
+[2022-09-06 19:24:34,166: DEBUG/MainProcess] pidbox received method conf(with_defaults=False) [reply_to:{'exchange': 'reply.celery.pidbox', 'routing_key': 'aa8c991a-318c-3404-a1b2-2d3d60141f2a'} ticket:9af89127-581d-449f-8361-dfcefd5cd888]
+[2022-09-06 19:24:34,978: DEBUG/MainProcess] celery@67dd6dcf6a7c joined the party
+[2022-09-06 19:24:38,063: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 19:24:38,064: INFO/MainProcess] Events of group {task} enabled by remote.
+[2022-09-06 19:24:43,062: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 19:24:48,062: DEBUG/MainProcess] pidbox received method enable_events() [reply_to:None ticket:None]
+[2022-09-06 19:24:53,887: DEBUG/MainProcess] | Worker: Closing Hub...
+[2022-09-06 19:24:53,889: DEBUG/MainProcess] | Worker: Closing Pool...
+[2022-09-06 19:24:53,890: DEBUG/MainProcess] | Worker: Closing Consumer...
+[2022-09-06 19:24:53,890: DEBUG/MainProcess] | Worker: Stopping Consumer...
+[2022-09-06 19:24:53,891: DEBUG/MainProcess] | Consumer: Closing Connection...
+[2022-09-06 19:24:53,892: DEBUG/MainProcess] | Consumer: Closing Events...
+[2022-09-06 19:24:53,892: DEBUG/MainProcess] | Consumer: Closing Mingle...
+[2022-09-06 19:24:53,893: DEBUG/MainProcess] | Consumer: Closing Gossip...
+[2022-09-06 19:24:53,894: DEBUG/MainProcess] | Consumer: Closing Tasks...
+[2022-09-06 19:24:53,895: DEBUG/MainProcess] | Consumer: Closing Control...
+[2022-09-06 19:24:53,895: DEBUG/MainProcess] | Consumer: Closing Heart...
+[2022-09-06 19:24:53,896: DEBUG/MainProcess] | Consumer: Closing event loop...
+[2022-09-06 19:24:53,897: DEBUG/MainProcess] | Consumer: Stopping event loop...
+[2022-09-06 19:24:53,897: DEBUG/MainProcess] | Consumer: Stopping Heart...
+[2022-09-06 19:24:53,899: DEBUG/MainProcess] | Consumer: Stopping Control...
+[2022-09-06 19:24:53,901: DEBUG/MainProcess] | Consumer: Stopping Tasks...
+[2022-09-06 19:24:53,902: DEBUG/MainProcess] Canceling task consumer...
+[2022-09-06 19:24:53,903: DEBUG/MainProcess] | Consumer: Stopping Gossip...
+[2022-09-06 19:24:53,905: DEBUG/MainProcess] | Consumer: Stopping Mingle...
+[2022-09-06 19:24:53,906: DEBUG/MainProcess] | Consumer: Stopping Events...
+[2022-09-06 19:24:53,907: DEBUG/MainProcess] | Consumer: Stopping Connection...
+[2022-09-06 19:24:53,908: DEBUG/MainProcess] | Worker: Stopping Pool...
+[2022-09-06 19:24:54,920: DEBUG/MainProcess] | Worker: Stopping Hub...
+[2022-09-06 19:24:54,920: DEBUG/MainProcess] | Consumer: Shutdown Heart...
+[2022-09-06 19:24:54,921: DEBUG/MainProcess] | Consumer: Shutdown Control...
+[2022-09-06 19:24:54,921: DEBUG/MainProcess] | Consumer: Shutdown Tasks...
+[2022-09-06 19:24:54,929: DEBUG/MainProcess] Canceling task consumer...
+[2022-09-06 19:24:54,935: DEBUG/MainProcess] Closing consumer channel...
+[2022-09-06 19:24:54,936: DEBUG/MainProcess] | Consumer: Shutdown Gossip...
+[2022-09-06 19:24:54,936: DEBUG/MainProcess] | Consumer: Shutdown Events...
+[2022-09-06 19:24:54,937: DEBUG/MainProcess] | Consumer: Shutdown Connection...
+[2022-09-06 19:24:54,938: DEBUG/MainProcess] removing tasks from inqueue until task handler finished
