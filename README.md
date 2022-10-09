@@ -17,7 +17,7 @@ Docker, NGINX, Gunicorn, Django, Django rest Framework, Celery, Celery Flower, R
 • SimpleJWT- The requests that are sent to the server are authenticated by with both access token and refresh token to ensure fraud and identity theft. The access token is given to the user when he logs in it has an expiration time of an 5 minutes the user gets it in the response or when he request to refresh it when it is expired.
 The refresh token is also given when the user logs in and it is stored in the cookies as an HttpOnly so the refresh token only visible to the server.
 
-• Postgres- Created two Postgres databases for scalability purposes synchronized with steaming replication. the main handle both read and write requests and the salve handle onlt read requests. The databases handle all conversations,messages and users data using Django bulit-in user system and custom models. Optinized queries using select_related to minimize the amout of SQL queries needed for a singke action.   
+• Postgres- Created two Postgres databases for scalability purposes synchronized with steaming replication. the main handle both read and write requests and the salve handle onlt read requests. The databases handle all conversations,messages and users data using Django bulit-in user system and custom models. Optinized queries using select_related to minimize the amout of SQL queries needed for a single action.   
 
 • PGPool- Serves as a load balncer between the two Postgres databases and routes the request dependig one the operation (write operation to main and read operation to both main and slave).
 
