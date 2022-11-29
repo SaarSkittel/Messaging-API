@@ -23,7 +23,7 @@ The refresh token is also given when the user logs in and it is stored in the co
 
 • PGAdmin- Used to monitor and manage Postgres datadases.
 
-• DJDT- Used to optimize requests queries and maximize response time of requests. 
+• DJDT- Used to optimize query requests and maximize response time of requests. 
 
 • Middleware- Middleware was used to insure tokens validation before executing requests.
 
