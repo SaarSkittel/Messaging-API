@@ -8,7 +8,7 @@ The project is implementing microservices architecture and uses technologies lik
 Docker, NGINX, Gunicorn, Django, Django rest Framework, Celery, Celery Flower, Redis, Postgres, PGPool, PGAdmin and DJDT.
 
 ## Technologies used
-• NGINX- Used as a webserver.
+• NGINX- Used as an API gateway.
 
 • Gunicorn- uesd as web service gateway interface. 
 
