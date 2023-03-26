@@ -7,7 +7,7 @@ The project is implementing microservices architecture and uses technologies lik
 ## Stack
 Docker, NGINX, Gunicorn, Django, Django rest Framework, Celery, Celery Flower, Redis, Postgres, PGPool, PGAdmin and DJDT.
 
-![image](https://saar-skittel.netlify.app/images/messaging_api/messaging%20diagram.png)
+![image]("https://saar-skittel.netlify.app/images/messaging_api/messaging%20diagram.png"
 
 ## Technologies used
 • NGINX- Used as an API gateway.
